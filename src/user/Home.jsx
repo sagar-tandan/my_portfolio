@@ -49,7 +49,10 @@ export default function Home() {
             <span className="uppercase font-SagarFont font-semibold ">
               i am{" "}
             </span>
+
             <TypedText />
+
+           
           </div>
 
           {/* intro ended here */}

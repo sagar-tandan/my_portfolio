@@ -18,7 +18,7 @@ function TypedText() {
     }, []);
 
     return (
-        <div className="typed-text font-bold uppercase text-[#29a587]"></div>
+        <div className="typed-text font-bold font-SagarFont uppercase text-[#29a587]"></div>
     );
 }
 
