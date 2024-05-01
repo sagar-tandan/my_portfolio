@@ -56,17 +56,17 @@ export default function Home() {
           {/* intro ended here */}
 
           <div className="flex flex-col justify-center items-center lg:flex-row-reverse w-full ">
-            <div className={`w-[380px] h-[380px] md:w-[500px] md:h-[500px] relative flex justify-center items-center mt-4`}>
-              <div className="w-[380px] h-[380px] md:w-[500px] md:h-[500px] rounded-full overflow-hidden relative">
-                <div className="relative w-[300px] h-[300px] bg-[#29a587] rounded-full top-[89px] left-[40px] md:w-[400px] md:h-[400px] md:top-[109px] md:left-[50px]"></div>
+            <div className={`w-[300px] h-[300px] md:w-[500px] md:h-[500px] relative flex justify-center items-center mt-4`}>
+              <div className="w-[300px] h-[300px] md:w-[500px] md:h-[500px] rounded-full overflow-hidden relative">
+                <div className="relative w-[250px] h-[250px] bg-[#29a587] rounded-full top-[55px] left-[25px] md:w-[400px] md:h-[400px] md:top-[109px] md:left-[50px]"></div>
                 <img
                   src={sagar}
                   alt="Your Image"
-                  class="w-[470px] h-[470px] z-20 md:w-[500px] md:h-[590px] object-cover object-center rounded-full absolute top-[46%] left-[55%] md:top-[45%] md:left-[54%] transform -translate-x-1/2 -translate-y-1/2"
+                  class="w-[370px] h-[370px] z-20 md:w-[500px] md:h-[590px] object-cover object-center rounded-full absolute top-[43%] left-[55%] md:top-[45%] md:left-[54%] transform -translate-x-1/2 -translate-y-1/2"
                 ></img>
               </div>
-              <div className="border-[1px] border-black bg-white w-[180px] h-[60px] md:w-[200px] md:h-[70px] rounded-full z-30 absolute bottom-13 left-[-30px] md:left-[-30px] " ></div>
-              <div className="border-[1px] border-black bg-white w-[180px] h-[60px] md:w-[200px] md:h-[70px]  rounded-full z-30 absolute bottom-2 right-[1px] md:right-2"></div>
+              <div className="border-[1px] border-black bg-white w-[160px] h-[55px] md:w-[200px] md:h-[70px] rounded-full z-30 absolute bottom-13 left-[-10px] md:left-[-30px] " ></div>
+              <div className="border-[1px] border-black bg-white w-[160px] h-[55px] md:w-[200px] md:h-[70px]  rounded-full z-30 absolute bottom-2 right-[1px] md:right-2"></div>
             </div>
 
             <div className="flex flex-col justify-center items-center mt-12 w-[80%] md:w-1/2">
