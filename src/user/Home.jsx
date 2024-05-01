@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import sagartandan from "../assets/Experience.png";
 import sagar from "../assets/sagarpng.png";
-import sagartext from "../assets/sagartandanpng.png";
 import TypedText from "../components/typedjs";
 import fb from "../assets/fb.png";
 import fbhover from "../assets/fbhover.png";
@@ -9,6 +7,7 @@ import insta from "../assets/insta.png";
 import instah from "../assets/instah.png";
 import twitter from "../assets/twitter.png";
 import twitterh from "../assets/twitterh.png";
+import Professional from "./Professional";
 
 export default function Home() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -56,7 +55,9 @@ export default function Home() {
           {/* intro ended here */}
 
           <div className="flex flex-col justify-center items-center lg:flex-row-reverse w-full ">
-            <div className={`w-[300px] h-[300px] md:w-[500px] md:h-[500px] relative flex justify-center items-center mt-4`}>
+            <div
+              className={`w-[300px] h-[300px] md:w-[500px] md:h-[500px] relative flex justify-center items-center mt-4`}
+            >
               <div className="w-[300px] h-[300px] md:w-[500px] md:h-[500px] rounded-full overflow-hidden relative">
                 <div className="relative w-[250px] h-[250px] bg-[#29a587] rounded-full top-[55px] left-[25px] md:w-[400px] md:h-[400px] md:top-[109px] md:left-[50px]"></div>
                 <img
@@ -65,7 +66,7 @@ export default function Home() {
                   class="w-[370px] h-[370px] z-20 md:w-[500px] md:h-[590px] object-cover object-center rounded-full absolute top-[43%] left-[55%] md:top-[45%] md:left-[54%] transform -translate-x-1/2 -translate-y-1/2"
                 ></img>
               </div>
-              <div className="border-[1px] border-black bg-white w-[160px] h-[55px] md:w-[200px] md:h-[70px] rounded-full z-30 absolute bottom-13 left-[-10px] md:left-[-30px] " ></div>
+              <div className="border-[1px] border-black bg-white w-[160px] h-[55px] md:w-[200px] md:h-[70px] rounded-full z-30 absolute bottom-13 left-[-10px] md:left-[-30px] "></div>
               <div className="border-[1px] border-black bg-white w-[160px] h-[55px] md:w-[200px] md:h-[70px]  rounded-full z-30 absolute bottom-2 right-[1px] md:right-2"></div>
             </div>
 
@@ -226,6 +227,11 @@ export default function Home() {
           </div>
         </div>
       )}
-   </div>
+
+      <div id="professional" className="mt-16">
+        <Professional />
+
+      </div>
+    </div>
   );
 }
