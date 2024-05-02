@@ -15,7 +15,7 @@ function ThemeProvider({ children }) {
   useEffect(() => {
     localStorage.setItem('darkMode', JSON.stringify(darkMode));
     // document.body.classList.toggle('bg-[#fffff]', !darkMode); // Light mode background color
-    document.body.classList.toggle('bg-[#232932]', darkMode); 
+    document.body.classList.toggle('bg-gray-950', darkMode); 
  
 
   }, [darkMode]);
