@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class",
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -8,7 +9,7 @@ export default {
     extend: {
       fontFamily:{
         'SagarFont':['Poppins','sans-serif'], 
-        'SagarFont2':['Dancing Script','sans-serif'],     }
+        'Midtown':['Midtown','Poppins','sans-serif'],     }
     },
   },
   plugins: [],

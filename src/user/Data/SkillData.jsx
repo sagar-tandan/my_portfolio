@@ -6,6 +6,7 @@ const SkillModel = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ex, deleniti eaque repellendus porro dolorum sint?",
     percentage: 60,
     width: "w-[60%]",
+    rem:"w-[40%]",
     left: "left-[57%]",
   },
   {
@@ -15,6 +16,7 @@ const SkillModel = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ex, deleniti eaque repellendus porro dolorum sint?",
     percentage: 70,
     width: "w-[70%]",
+    rem:"w-[30%]",
     left: "left-[68%]",
   },
   {
@@ -24,6 +26,7 @@ const SkillModel = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ex, deleniti eaque repellendus porro dolorum sint?",
     percentage: 60,
     width: "w-[60%]",
+    rem:"w-[40%]",
     left: "left-[57%]",
   },
   {
@@ -33,6 +36,7 @@ const SkillModel = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ex, deleniti eaque repellendus porro dolorum sint?",
     percentage: 60,
     width: "w-[60%]",
+    rem:"w-[40%]",
     left: "left-[57%]",
   },
   {
@@ -42,6 +46,7 @@ const SkillModel = [
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ex, deleniti eaque repellendus porro dolorum sint?",
     percentage: 70,
     width: "w-[70%]",
+    rem:"w-[30%]",
     left: "left-[68%]",
   },
   {
@@ -49,18 +54,20 @@ const SkillModel = [
     name: "Fitness",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ex, deleniti eaque repellendus porro dolorum sint?",
-    percentage: 50,
-    width: "w-[50%]",
-    left: "right-[50%]",
+    percentage: 80,
+    width: "w-[80%]",
+    rem:"w-[20%]",
+    left: "left-[78%]",
   },
   {
     id: 6,
     name: "Video Editing",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ex, deleniti eaque repellendus porro dolorum sint?",
-    percentage: 80,
-    width: "w-[80%]",
-    left: "left-[78%]",
+    percentage: 70,
+    width: "w-[70%]",
+    rem:"w-[30%]",
+    left: "left-[68%]",
   },
 ];
 

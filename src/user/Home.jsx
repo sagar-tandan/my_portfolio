@@ -1,16 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import sagar from "../assets/sagarpng.png";
-import TypedText from "../components/typedjs";
 import fb from "../assets/fb.png";
 import fbhover from "../assets/fbhover.png";
 import insta from "../assets/insta.png";
 import instah from "../assets/instah.png";
 import twitter from "../assets/twitter.png";
+import wfb from "../assets/fbwhite.png";
 import twitterh from "../assets/twitterh.png";
+import winsta from "../assets/instawhite.png";
+import wtwi from "../assets/twitterwhite.png";
 import Professional from "./Professional";
+import { TypeAnimation } from "react-type-animation";
+import { ThemeContext } from "../components/ThemeProvider.jsx";
 
 export default function Home() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const { darkMode, setDarkMode } = useContext(ThemeContext);
 
   // useEffect to set initial screen size and add event listener
   useEffect(() => {
@@ -30,12 +35,12 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-[#ebe6df]">
+    <div className={darkMode ? "dark" : ""}>
       {isSmallScreen && (
         <div className="flex flex-col justify-center items-center max-w-screen-lg pt-10">
           {/* beginning of intro */}
           <div className="w-full justify-center items-center flex gap-2">
-            <span className="font-SagarFont font-semibold uppercase">
+            <span className="font-SagarFont font-semibold uppercase dark:text-white">
               Hello,
             </span>
             <span className="font-SagarFont font-semibold uppercase text-[#29a587]">
@@ -46,13 +51,25 @@ export default function Home() {
             sagar tandan
           </div>
           <div className="flex gap-1 w-full justify-center items-center">
-            <span className="uppercase font-SagarFont font-semibold ">
-              i am{" "}
+            <span className="uppercase font-SagarFont font-semibold dark:text-white ">
+              i am
             </span>
 
-            <TypedText />
-
-           
+            <span className="uppercase font-SagarFont font-semibold text-[#29a587]">
+              <TypeAnimation
+                sequence={[
+                  "Web developer",
+                  1000,
+                  "App developer",
+                  1000,
+                  "Gym instructor",
+                  1000,
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+              />
+            </span>
           </div>
 
           {/* intro ended here */}
@@ -74,18 +91,27 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col justify-center items-center mt-12 w-[80%] md:w-1/2">
-              <div className="font-SagarFont text-[#655b4b]">
+              <div className="font-SagarFont text-[#655b4b] dark:text-white">
                 From France, Paris. I have rich experience in web design, also I
                 am good at wordpress. I love to talk with you about our unique.
               </div>
 
               <div className="flex w-full sm:w-1/2  justify-around mt-6 ">
                 <div class="group relative hover:cursor-pointer">
-                  <img
-                    src={fb}
-                    alt="Normal Image"
-                    class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
-                  />
+                  {darkMode ? (
+                    <img
+                      src={wfb}
+                      alt="Normal Image"
+                      class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
+                    />
+                  ) : (
+                    <img
+                      src={fb}
+                      alt="Normal Image"
+                      class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
+                    />
+                  )}
+
                   <img
                     src={fbhover}
                     alt="Hover Image"
@@ -93,11 +119,19 @@ export default function Home() {
                   />
                 </div>
                 <div class="group relative hover:cursor-pointer">
-                  <img
-                    src={twitter}
-                    alt="Normal Image"
-                    class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
-                  />
+                  {darkMode ? (
+                    <img
+                      src={wtwi}
+                      alt="Normal Image"
+                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                    />
+                  ) : (
+                    <img
+                      src={twitter}
+                      alt="Normal Image"
+                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                    />
+                  )}
                   <img
                     src={twitterh}
                     alt="Hover Image"
@@ -106,11 +140,19 @@ export default function Home() {
                 </div>
 
                 <div class="group relative hover:cursor-pointer">
-                  <img
-                    src={insta}
-                    alt="Normal Image"
-                    class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
-                  />
+                  {darkMode ? (
+                    <img
+                      src={winsta}
+                      alt="Normal Image"
+                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                    />
+                  ) : (
+                    <img
+                      src={insta}
+                      alt="Normal Image"
+                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                    />
+                  )}
                   <img
                     src={instah}
                     alt="Hover Image"
@@ -121,7 +163,7 @@ export default function Home() {
 
               <div className="w-full flex justify-center items-center mt-2">
                 <div className="group relative w-full sm:w-[70%] my-5 flex justify-center items-center">
-                  <span className="w-full flex justify-center items-center uppercase font-SagarFont border-[2px] rounded-full border-black py-3 px-10 font-semibold text-sm z-10 group-hover:text-white transition ease-in-out duration-500 group-hover:cursor-pointer active:scale-[95%]">
+                  <span className="w-full flex justify-center items-center uppercase font-SagarFont border-[2px] rounded-full border-black dark:border-white py-3 px-10 font-semibold text-sm z-10 group-hover:text-white dark:text-white dark:group-hover:text-black transition ease-in-out duration-500 group-hover:cursor-pointer active:scale-[95%]">
                     Download Cv
                   </span>
                   <span className="absolute w-full bg-[#29a587] rounded-full py-[22px] px-[93px] invisible group-hover:visible transform scale-x-0 transition-transform duration-500 ease-in-out group-hover:scale-x-100 group-active:scale-[95%]"></span>
@@ -138,7 +180,7 @@ export default function Home() {
           {/* beginning of intro */}
           <div className=" ml-32 pt-10w-full">
             <div className="w-full justify-start items-center flex gap-2 ">
-              <span className="font-SagarFont font-semibold uppercase">
+              <span className="font-SagarFont font-semibold uppercase dark:text-white">
                 Hello,
               </span>
               <span className="font-SagarFont font-semibold uppercase text-[#29a587]">
@@ -149,37 +191,68 @@ export default function Home() {
               sagar tandan
             </div>
             <div className="flex gap-1 w-full justify-start items-start">
-              <span className="uppercase font-SagarFont font-semibold ">
+              <span className="uppercase font-SagarFont font-semibold dark:text-white">
                 i am
               </span>
-              <TypedText />
+              <span className="uppercase font-SagarFont font-semibold text-[#29a587]">
+                <TypeAnimation
+                  sequence={[
+                    "Web developer",
+                    1000,
+                    "App developer",
+                    1000,
+                    "Gym instructor",
+                    1000,
+                  ]}
+                  wrapper="span"
+                  speed={50}
+                  repeat={Infinity}
+                />
+              </span>
             </div>
 
             <div className="flex flex-col justify-center items-center mt-8 ">
-              <div className="font-SagarFont text-[#655b4b]">
+              <div className="font-SagarFont text-[#423a2f] dark:text-white">
                 From France, Paris. I have rich experience in web design, also I
                 am good at wordpress. I love to talk with you about our unique.
               </div>
 
               <div className="flex w-full justify-start gap-5 mt-6 ">
                 <div class="group relative hover:cursor-pointer">
-                  <img
-                    src={fb}
-                    alt="Normal Image"
-                    class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
-                  />
+                  {darkMode ? (
+                    <img
+                      src={wfb}
+                      alt="Normal Image"
+                      class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
+                    />
+                  ) : (
+                    <img
+                      src={fb}
+                      alt="Normal Image"
+                      class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
+                    />
+                  )}
                   <img
                     src={fbhover}
-                    alt="Hover Image"
-                    class="w-7 h-6  absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
+                    alt="Normal Image"
+                    class="w-7 h-6 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
                   />
                 </div>
                 <div class="group relative hover:cursor-pointer">
-                  <img
-                    src={twitter}
-                    alt="Normal Image"
-                    class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
-                  />
+                  {darkMode ? (
+                    <img
+                      src={wtwi}
+                      alt="Normal Image"
+                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                    />
+                  ) : (
+                    <img
+                      src={twitter}
+                      alt="Normal Image"
+                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                    />
+                  )}
+
                   <img
                     src={twitterh}
                     alt="Hover Image"
@@ -188,11 +261,19 @@ export default function Home() {
                 </div>
 
                 <div class="group relative hover:cursor-pointer">
-                  <img
-                    src={insta}
-                    alt="Normal Image"
-                    class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
-                  />
+                  {darkMode ? (
+                    <img
+                      src={winsta}
+                      alt="Normal Image"
+                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                    />
+                  ) : (
+                    <img
+                      src={insta}
+                      alt="Normal Image"
+                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                    />
+                  )}
                   <img
                     src={instah}
                     alt="Hover Image"
@@ -203,7 +284,7 @@ export default function Home() {
 
               <div className="w-full flex justify-start items-center mt-2">
                 <div className="group relative w-full xl:w-[70%] my-5 flex justify-center items-center">
-                  <span className="w-full flex justify-center items-center uppercase font-SagarFont border-[2px] rounded-full border-black py-3 px-10 font-semibold text-sm z-10 group-hover:text-white transition ease-in-out duration-500 group-hover:cursor-pointer active:scale-[95%]">
+                  <span className="w-full flex justify-center items-center uppercase font-SagarFont border-[2px] rounded-full border-black dark:border-white py-3 px-10 font-semibold text-sm z-10 text-black dark:text-white group-hover:text-white dark:group-hover:text-black transition ease-in-out duration-500 group-hover:cursor-pointer active:scale-[95%]">
                     Download Cv
                   </span>
                   <span className="absolute w-full bg-[#29a587] rounded-full py-[22px] px-[93px] invisible group-hover:visible transform scale-x-0 transition-transform duration-500 ease-in-out group-hover:scale-x-100 group-active:scale-[95%]"></span>
@@ -233,7 +314,6 @@ export default function Home() {
 
       <div id="professional" className="mt-16">
         <Professional />
-
       </div>
     </div>
   );
