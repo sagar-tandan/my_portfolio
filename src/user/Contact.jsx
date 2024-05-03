@@ -147,16 +147,16 @@ export default function Contact() {
   // }
   return (
     <div>
-      <div className="flex justify-center items-center w-full flex-col px-12">
+      <div className="flex justify-center items-center w-full flex-col px-6">
         <div className="flex flex-col justify-center items-center gap-3 w-full max-w-screen-2xl 2xl:mx-auto md:mx-20 mx-10 lg:mx-16 pt-16">
-          <h2 className="uppercase font-SagarFont font-bold text-3xl tracking-wider mt-5 text-black dark:text-white">
+          <h2 className="uppercase font-SagarFont font-bold text-lg lg:text-3xl tracking-wider mt-5 text-black dark:text-white">
             Contact me
           </h2>
           <div className="flex gap-2 justify-center items-center">
-            <span className="font-SagarFont font-semibold text-md uppercase text-[#29a587] underline">
+            <span className="font-SagarFont font-semibold text-sm lg:text-md uppercase text-[#29a587] underline">
               let's
             </span>
-            <span className="font-SagarFont font-semibold text-md text-black dark:text-white">
+            <span className="font-SagarFont font-semibold text-sm lg:text-md text-black dark:text-white">
               Talk about ideas
             </span>
           </div>
@@ -167,25 +167,25 @@ export default function Contact() {
             <div className="mt-12 w-full flex flex-col lg:ml-16 lg:w-[80%] lg:gap-12 gap-8">
               {/* ADDRESS START HERE */}
               <div
-                className="flex gap-20 w-full justify-start items-center hover:cursor-pointer"
+                className="flex gap-6 lg:gap-20 w-full justify-start items-center hover:cursor-pointer"
                 onClick={() => {
                   openInMaps("chhatrakot,Gulmi,Nepal");
                 }}
               >
-                <div className="relative border-[2px] rounded-full w-14 h-14 border-black dark:border-white flex justify-center items-center">
+                <div className="relative border-[2px] rounded-full w-9 h-9 lg:w-14 lg:h-14 border-black dark:border-white flex justify-center items-center">
                   <img
-                    className="w-11 h-11 p-[6px]"
+                    className="w-8 h-8 p-[5px] lg:w-11 lg:h-11 lg:p-[6px]"
                     src={darkMode ? addressW : address}
                     alt=""
                   />
-                  <div className="absolute border-[1px] w-full right-[-100%] dark:border-white border-black"></div>
+                  <div className="absolute border-[1px] w-[50%] right-[-50%] lg:w-full lg:right-[-50%] dark:border-white border-black"></div>
                 </div>
 
                 <div className="flex flex-col mt-4">
-                  <h3 className="font-SagarFont font-semibold text-xl text-black dark:text-white tracking-wider">
+                <h3 className="font-SagarFont font-semibold text-black dark:text-white tracking-wider text-lg lg:text-xl">
                     Address
                   </h3>
-                  <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b]">
+                  <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] text-sm lg:text-lg">
                     Chhatrakot, Gulmi, Nepal
                   </h4>
                 </div>
@@ -193,21 +193,22 @@ export default function Contact() {
 
               {/* FREELANCE START HERE */}
 
-              <div className="flex gap-20 w-full justify-start items-center">
-                <div className="relative border-[2px] rounded-full w-14 h-14 border-black dark:border-white flex justify-center items-center">
+              <div 
+                className="flex gap-6 lg:gap-20 w-full justify-start items-center hover:cursor-pointer">
+                <div className="relative border-[2px] rounded-full w-9 h-9 lg:w-14 lg:h-14 border-black dark:border-white flex justify-center items-center">
                   <img
-                    className="w-11 h-11 p-[6px]"
+                    className="w-8 h-8 p-[5px] lg:w-11 lg:h-11 lg:p-[6px]"
                     src={darkMode ? freelaW : freela}
                     alt=""
                   />
-                  <div className="absolute border-[1px] w-full right-[-100%] dark:border-white border-black"></div>
+                  <div className="absolute border-[1px] w-[50%] right-[-50%] lg:w-full lg:right-[-50%] dark:border-white border-black"></div>
                 </div>
 
                 <div className="flex flex-col mt-4">
-                  <h3 className="font-SagarFont font-semibold text-xl text-black dark:text-white tracking-wider">
+                <h3 className="font-SagarFont font-semibold text-black dark:text-white tracking-wider text-lg lg:text-xl">
                     Freelance
                   </h3>
-                  <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b]">
+                  <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] text-sm lg:text-lg">
                     Available Right Now
                   </h4>
                 </div>
@@ -215,25 +216,25 @@ export default function Contact() {
 
               {/* EMAIL START HERE */}
               <div
-                className="flex gap-20 w-full justify-start items-center hover:cursor-pointer"
+                className="flex gap-6 lg:gap-20 w-full justify-start items-center hover:cursor-pointer"
                 onClick={() => {
                   sendEmail("sagarchhetry333@gmail.com");
                 }}
               >
-                <div className="relative border-[2px] rounded-full w-14 h-14 border-black dark:border-white flex justify-center items-center">
+                <div className="relative border-[2px] rounded-full w-9 h-9 lg:w-14 lg:h-14 border-black dark:border-white flex justify-center items-center">
                   <img
-                    className="w-11 h-11 p-[6px]"
+                    className="w-8 h-8 p-[5px] lg:w-11 lg:h-11 lg:p-[6px]"
                     src={darkMode ? mailW : mail}
                     alt=""
                   />
-                  <div className="absolute border-[1px] w-full right-[-100%] dark:border-white border-black"></div>
+                  <div className="absolute border-[1px] w-[50%] right-[-50%] lg:w-full lg:right-[-50%] dark:border-white border-black"></div>
                 </div>
 
                 <div className="flex flex-col mt-4">
-                  <h3 className="font-SagarFont font-semibold text-xl text-black dark:text-white tracking-wider">
+                <h3 className="font-SagarFont font-semibold text-black dark:text-white tracking-wider text-lg lg:text-xl">
                     Email
                   </h3>
-                  <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b]">
+                  <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] text-sm lg:text-lg">
                     sagarchhetry333@gmail.com
                   </h4>
                 </div>
@@ -241,29 +242,31 @@ export default function Contact() {
 
               {/* PHONE START HERE */}
               <div
-                className="flex gap-20 w-full justify-start items-center hover:cursor-pointer"
+                className="flex gap-6 lg:gap-20 w-full justify-start items-center hover:cursor-pointer"
                 onClick={() => {
                   makeCall("+977960788076");
                 }}
               >
-                <div className="relative border-[2px] rounded-full w-14 h-14 border-black dark:border-white flex justify-center items-center">
+                <div className="relative border-[2px] rounded-full w-9 h-9 lg:w-14 lg:h-14 border-black dark:border-white flex justify-center items-center">
                   <img
-                    className="w-11 h-11 p-[6px]"
+                    className="w-8 h-8 p-[5px] lg:w-11 lg:h-11 lg:p-[6px]"
                     src={darkMode ? contactW : contact}
                     alt=""
                   />
-                  <div className="absolute border-[1px] w-full right-[-100%] dark:border-white border-black"></div>
+                  <div className="absolute border-[1px] w-[50%] right-[-50%] lg:w-full lg:right-[-50%] dark:border-white border-black"></div>
                 </div>
 
                 <div className="flex flex-col mt-4">
-                  <h3 className="font-SagarFont font-semibold text-xl text-black dark:text-white tracking-wider">
+                <h3 className="font-SagarFont font-semibold text-black dark:text-white tracking-wider text-lg lg:text-xl">
                     Phone
                   </h3>
-                  <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b]">
+                  <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] text-sm lg:text-lg">
                     +977-9860788076
                   </h4>
                 </div>
               </div>
+
+              
             </div>
             <ContactForm />
           </div>

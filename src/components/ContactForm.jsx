@@ -162,7 +162,7 @@ const ContactForm = () => {
       {/* for button  */}
 
       <div className="w-full flex justify-end items-center my-3">
-        <div className="group relative w-1/2 flex justify-center items-center">
+        <div className="group relative w-[80%] lg:w-1/2 flex justify-center items-center">
           <button type="submit" className="w-full flex justify-center items-center uppercase font-SagarFont border-[2px] rounded-full border-black dark:border-white py-3 px-10 font-semibold text-sm z-10 group-hover:text-white dark:text-white dark:group-hover:text-black transition ease-in-out duration-500 group-hover:cursor-pointer active:scale-[95%]">
             send message
           </button>
