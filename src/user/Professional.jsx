@@ -40,7 +40,7 @@ export default function Professional() {
                 {each.description}
               </p>
 
-              <div className="relative w-[90%] lg:w-[80%] rounded-full mt-3 ">
+              <div className="relative w-[90%] rounded-full mt-3 ">
                 {/* border-[#e3d4c0] dark:border-[#1f1e1d] */}
                 <div className="flex">
                   <div

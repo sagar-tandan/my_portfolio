@@ -178,7 +178,7 @@ export default function Contact() {
                     src={darkMode ? addressW : address}
                     alt=""
                   />
-                  <div className="absolute border-[1px] w-[50%] right-[-50%] lg:w-full lg:right-[-50%] dark:border-white border-black"></div>
+                  <div className="absolute border-[1px] w-[50%] right-[-50%] lg:w-full lg:right-[-100%] dark:border-white border-black"></div>
                 </div>
 
                 <div className="flex flex-col mt-4">
@@ -201,7 +201,7 @@ export default function Contact() {
                     src={darkMode ? freelaW : freela}
                     alt=""
                   />
-                  <div className="absolute border-[1px] w-[50%] right-[-50%] lg:w-full lg:right-[-50%] dark:border-white border-black"></div>
+                  <div className="absolute border-[1px] w-[50%] right-[-50%] lg:w-full lg:right-[-100%] dark:border-white border-black"></div>
                 </div>
 
                 <div className="flex flex-col mt-4">
@@ -227,7 +227,7 @@ export default function Contact() {
                     src={darkMode ? mailW : mail}
                     alt=""
                   />
-                  <div className="absolute border-[1px] w-[50%] right-[-50%] lg:w-full lg:right-[-50%] dark:border-white border-black"></div>
+                  <div className="absolute border-[1px] w-[50%] right-[-50%] lg:w-full lg:right-[-100%] dark:border-white border-black"></div>
                 </div>
 
                 <div className="flex flex-col mt-4">
@@ -253,7 +253,7 @@ export default function Contact() {
                     src={darkMode ? contactW : contact}
                     alt=""
                   />
-                  <div className="absolute border-[1px] w-[50%] right-[-50%] lg:w-full lg:right-[-50%] dark:border-white border-black"></div>
+                  <div className="absolute border-[1px] w-[50%] right-[-50%] lg:w-full lg:right-[-100%] dark:border-white border-black"></div>
                 </div>
 
                 <div className="flex flex-col mt-4">
