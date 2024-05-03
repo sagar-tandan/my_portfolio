@@ -10,6 +10,7 @@ import twitterh from "../assets/twitterh.png";
 import winsta from "../assets/instawhite.png";
 import wtwi from "../assets/twitterwhite.png";
 import Professional from "./Professional";
+import Contact from "./Contact.jsx";
 import { TypeAnimation } from "react-type-animation";
 import { ThemeContext } from "../components/ThemeProvider.jsx";
 
@@ -32,12 +33,12 @@ export default function Home() {
 
     // Cleanup function to remove event listener
     return () => window.removeEventListener("resize", checkScreenSize);
-  }, []);
+  }); // Removed the empty dependency array
 
   return (
     <div className={darkMode ? "dark" : ""}>
       {isSmallScreen && (
-        <div className="flex flex-col justify-center items-center max-w-screen-lg pt-10">
+        <div className="flex flex-col justify-center items-center max-w-screen-lg pt-6">
           {/* beginning of intro */}
           <div className="w-full justify-center items-center flex gap-2">
             <span className="font-SagarFont font-semibold uppercase dark:text-white">
@@ -47,8 +48,8 @@ export default function Home() {
               My name is
             </span>
           </div>
-          <div className="w-full flex justify-center items-center font-extrabold uppercase text-[#29a587] font-SagarFont text-4xl my-2 font-outline-2 drop-shadow-[0_1.2px_1.2px_rgba(93,136,83,0.9)]">
-            sagar tandan
+          <div className="w-full flex gap-3 justify-center items-center font-extrabold uppercase text-[#29a587] font-SagarFont text-4xl my-2 font-outline-2 drop-shadow-[0_1.2px_1.2px_rgba(93,136,83,0.9)]">
+            <span>sagar </span> <span className="text-white">tandan</span>
           </div>
           <div className="flex gap-1 w-full justify-center items-center">
             <span className="uppercase font-SagarFont font-semibold dark:text-white ">
@@ -86,8 +87,8 @@ export default function Home() {
                   class="w-[370px] h-[370px] z-20 md:w-[500px] md:h-[590px] object-cover object-center rounded-full absolute top-[43%] left-[55%] md:top-[45%] md:left-[54%] transform -translate-x-1/2 -translate-y-1/2"
                 ></img>
               </div>
-              <div className="border-[1px] border-black bg-white w-[160px] h-[55px] md:w-[200px] md:h-[70px] rounded-full z-30 absolute bottom-13 left-[-10px] md:left-[-30px] "></div>
-              <div className="border-[1px] border-black bg-white w-[160px] h-[55px] md:w-[200px] md:h-[70px]  rounded-full z-30 absolute bottom-2 right-[1px] md:right-2"></div>
+              <div className="border-[1px] border-black bg-white w-[160px] h-[55px] md:w-[200px] md:h-[70px] rounded-full z-30 absolute bottom-13 left-[-10px] md:left-[-30px] dark:bg-gray-800 dark:border-white"></div>
+              <div className="border-[1px] border-black bg-white w-[160px] h-[55px] md:w-[200px] md:h-[70px]  rounded-full z-30 absolute bottom-2 right-[1px] md:right-2 dark:bg-gray-800 dark:border-white"></div>
             </div>
 
             <div className="flex flex-col justify-center items-center mt-12 w-[80%] md:w-1/2">
@@ -97,68 +98,86 @@ export default function Home() {
               </div>
 
               <div className="flex w-full sm:w-1/2  justify-around mt-6 ">
-                <div class="group relative hover:cursor-pointer">
-                  {darkMode ? (
-                    <img
-                      src={wfb}
-                      alt="Normal Image"
-                      class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
-                    />
-                  ) : (
-                    <img
-                      src={fb}
-                      alt="Normal Image"
-                      class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
-                    />
-                  )}
+                <a
+                  href="https://www.facebook.com/sagartandan333"
+                  target="_blank"
+                  rel="noreferrer "
+                >
+                  <div class="group relative hover:cursor-pointer">
+                    {darkMode ? (
+                      <img
+                        src={wfb}
+                        alt="Normal Image"
+                        class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
+                      />
+                    ) : (
+                      <img
+                        src={fb}
+                        alt="Normal Image"
+                        class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
+                      />
+                    )}
 
-                  <img
-                    src={fbhover}
-                    alt="Hover Image"
-                    class="w-7 h-6  absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
-                  />
-                </div>
-                <div class="group relative hover:cursor-pointer">
-                  {darkMode ? (
                     <img
-                      src={wtwi}
-                      alt="Normal Image"
-                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                      src={fbhover}
+                      alt="Hover Image"
+                      class="w-7 h-6  absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
                     />
-                  ) : (
-                    <img
-                      src={twitter}
-                      alt="Normal Image"
-                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
-                    />
-                  )}
-                  <img
-                    src={twitterh}
-                    alt="Hover Image"
-                    class="w-7 h-7 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
-                  />
-                </div>
+                  </div>
+                </a>
 
-                <div class="group relative hover:cursor-pointer">
-                  {darkMode ? (
+                <a
+                  href="https://twitter.com/SagarTanda882"
+                  target="_blank"
+                  rel="noreferrer "
+                >
+                  <div class="group relative hover:cursor-pointer">
+                    {darkMode ? (
+                      <img
+                        src={wtwi}
+                        alt="Normal Image"
+                        class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                      />
+                    ) : (
+                      <img
+                        src={twitter}
+                        alt="Normal Image"
+                        class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                      />
+                    )}
                     <img
-                      src={winsta}
-                      alt="Normal Image"
-                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                      src={twitterh}
+                      alt="Hover Image"
+                      class="w-7 h-7 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
                     />
-                  ) : (
+                  </div>
+                </a>
+                <a
+                  href="https://www.instagram.com/sagartandan_/"
+                  target="_blank"
+                  rel="noreferrer "
+                >
+                  <div class="group relative hover:cursor-pointer">
+                    {darkMode ? (
+                      <img
+                        src={winsta}
+                        alt="Normal Image"
+                        class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                      />
+                    ) : (
+                      <img
+                        src={insta}
+                        alt="Normal Image"
+                        class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                      />
+                    )}
                     <img
-                      src={insta}
-                      alt="Normal Image"
-                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                      src={instah}
+                      alt="Hover Image"
+                      class="w-7 h-7 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
                     />
-                  )}
-                  <img
-                    src={instah}
-                    alt="Hover Image"
-                    class="w-7 h-7 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
-                  />
-                </div>
+                  </div>
+                </a>
               </div>
 
               <div className="w-full flex justify-center items-center mt-2">
@@ -178,7 +197,7 @@ export default function Home() {
       {!isSmallScreen && (
         <div className="flex flex-row justify-center items-center max-w-screen-2xl mx-auto">
           {/* beginning of intro */}
-          <div className=" ml-32 pt-10w-full">
+          <div className=" ml-32 w-full">
             <div className="w-full justify-start items-center flex gap-2 ">
               <span className="font-SagarFont font-semibold uppercase dark:text-white">
                 Hello,
@@ -187,8 +206,8 @@ export default function Home() {
                 My name is
               </span>
             </div>
-            <div className="w-full flex justify-start items-center font-extrabold uppercase text-[#29a587] font-SagarFont text-5xl my-2 font-outline-2 drop-shadow-[0_1.2px_1.2px_rgba(93,136,83,0.9)]">
-              sagar tandan
+            <div className="w-full flex gap-3 justify-start items-center font-extrabold uppercase text-[#29a587] font-SagarFont text-5xl my-2 font-outline-2 drop-shadow-[0_1.2px_1.2px_rgba(93,136,83,0.9)]">
+              <span>sagar </span> <span className="text-white">tandan</span>
             </div>
             <div className="flex gap-1 w-full justify-start items-start">
               <span className="uppercase font-SagarFont font-semibold dark:text-white">
@@ -218,68 +237,87 @@ export default function Home() {
               </div>
 
               <div className="flex w-full justify-start gap-5 mt-6 ">
-                <div class="group relative hover:cursor-pointer">
-                  {darkMode ? (
+                <a
+                  href="https://www.facebook.com/sagartandan333"
+                  target="_blank"
+                  rel="noreferrer "
+                >
+                  <div class="group relative hover:cursor-pointer">
+                    {darkMode ? (
+                      <img
+                        src={wfb}
+                        alt="Normal Image"
+                        class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
+                      />
+                    ) : (
+                      <img
+                        src={fb}
+                        alt="Normal Image"
+                        class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
+                      />
+                    )}
                     <img
-                      src={wfb}
+                      src={fbhover}
                       alt="Normal Image"
-                      class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
+                      class="w-7 h-6 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
                     />
-                  ) : (
-                    <img
-                      src={fb}
-                      alt="Normal Image"
-                      class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
-                    />
-                  )}
-                  <img
-                    src={fbhover}
-                    alt="Normal Image"
-                    class="w-7 h-6 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
-                  />
-                </div>
-                <div class="group relative hover:cursor-pointer">
-                  {darkMode ? (
-                    <img
-                      src={wtwi}
-                      alt="Normal Image"
-                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
-                    />
-                  ) : (
-                    <img
-                      src={twitter}
-                      alt="Normal Image"
-                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
-                    />
-                  )}
+                  </div>
+                </a>
 
-                  <img
-                    src={twitterh}
-                    alt="Hover Image"
-                    class="w-7 h-7 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
-                  />
-                </div>
+                <a
+                  href="https://twitter.com/SagarTanda882"
+                  target="_blank"
+                  rel="noreferrer "
+                >
+                  <div class="group relative hover:cursor-pointer">
+                    {darkMode ? (
+                      <img
+                        src={wtwi}
+                        alt="Normal Image"
+                        class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                      />
+                    ) : (
+                      <img
+                        src={twitter}
+                        alt="Normal Image"
+                        class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                      />
+                    )}
 
-                <div class="group relative hover:cursor-pointer">
-                  {darkMode ? (
                     <img
-                      src={winsta}
-                      alt="Normal Image"
-                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                      src={twitterh}
+                      alt="Hover Image"
+                      class="w-7 h-7 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
                     />
-                  ) : (
+                  </div>
+                </a>
+
+                <a
+                  href="https://www.instagram.com/sagartandan_/"
+                  target="_blank"
+                  rel="noreferrer "
+                >
+                  <div class="group relative hover:cursor-pointer">
+                    {darkMode ? (
+                      <img
+                        src={winsta}
+                        alt="Normal Image"
+                        class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                      />
+                    ) : (
+                      <img
+                        src={insta}
+                        alt="Normal Image"
+                        class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                      />
+                    )}
                     <img
-                      src={insta}
-                      alt="Normal Image"
-                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                      src={instah}
+                      alt="Hover Image"
+                      class="w-7 h-7 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
                     />
-                  )}
-                  <img
-                    src={instah}
-                    alt="Hover Image"
-                    class="w-7 h-7 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
-                  />
-                </div>
+                  </div>
+                </a>
               </div>
 
               <div className="w-full flex justify-start items-center mt-2">
@@ -305,15 +343,19 @@ export default function Home() {
                   class="w-[500px] h-[590px] z-20 object-cover object-center rounded-full absolute top-[45%] left-[54%] transform -translate-x-1/2 -translate-y-1/2"
                 ></img>
               </div>
-              <div className="border-[1px] border-black bg-white w-[200px] h-[70px] rounded-full z-30 absolute bottom-13 left-[-30px]"></div>
-              <div className="border-[1px] border-black bg-white w-[200px] h-[70px] rounded-full z-30 absolute bottom-2 right-3"></div>
+              <div className="border-[1px] border-black bg-white w-[200px] h-[70px] rounded-full z-30 absolute bottom-13 left-[-30px] dark:bg-gray-800 dark:border-white transition-all ease-in-out duration-300"></div>
+              <div className="border-[1px] border-black bg-white w-[200px] h-[70px] rounded-full z-30 absolute bottom-2 right-3 dark:bg-gray-800 dark:border-white transition-all ease-in-out duration-300"></div>
             </div>
           </div>
         </div>
       )}
 
-      <div id="professional" className="mt-16">
+      <div id="skills" className="">
         <Professional />
+      </div>
+
+      <div id="contact" className="">
+        <Contact />
       </div>
     </div>
   );

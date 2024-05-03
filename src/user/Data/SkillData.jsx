@@ -40,7 +40,7 @@ const SkillModel = [
     left: "left-[57%]",
   },
   {
-    id: 3,
+    id: 4,
     name: "Javascript",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ex, deleniti eaque repellendus porro dolorum sint?",

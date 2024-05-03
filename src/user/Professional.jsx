@@ -12,7 +12,7 @@ export default function Professional() {
 
   return (
     <div className={darkMode ? "dark" : ""}>
-      <div className="flex flex-col justify-center items-center gap-3 max-w-screen-2xl 2xl:mx-auto md:mx-20 mx-10 lg:mx-16">
+      <div className="flex flex-col justify-center items-center gap-3 max-w-screen-2xl 2xl:mx-auto md:mx-20 mx-10 lg:mx-16 pt-16">
         <h1 className="uppercase font-SagarFont font-bold text-3xl tracking-wider mt-5 text-black dark:text-white">
           Professional skills
         </h1>
@@ -27,7 +27,7 @@ export default function Professional() {
 
         <div className="flex flex-col md:flex-row flex-wrap">
           {skill.map((each) => (
-            <div className="flex flex-col w-full md:w-1/2 lg:w-1/3 justify-center items-center my-5">
+            <div  key={each.id} className="flex flex-col w-full md:w-1/2 lg:w-1/3 justify-center items-center my-5">
               <div className=" flex justify-between items-center font-semibold font-SagarFont p-1 text-md w-[80%] text-black dark:text-white">
                 <h3>{each.name}</h3>
                 <div className="flex gap-1 text-black dark:text-white">
@@ -40,7 +40,7 @@ export default function Professional() {
                 {each.description}
               </p>
 
-              <div className="relative w-[95%] rounded-full mt-3 ">
+              <div className="relative w-[90%] lg:w-[80%] rounded-full mt-3 ">
                 {/* border-[#e3d4c0] dark:border-[#1f1e1d] */}
                 <div className="flex">
                   <div

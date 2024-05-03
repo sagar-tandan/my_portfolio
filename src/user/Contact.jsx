@@ -1,0 +1,274 @@
+import React, { useContext, useState } from "react";
+import address from "../assets/Icons/address.png";
+import addressW from "../assets/Icons/addressW.png";
+import contact from "../assets/Icons/contact.png";
+import contactW from "../assets/Icons/contactW.png";
+import freela from "../assets/Icons/freela.png";
+import freelaW from "../assets/Icons/freelaW.png";
+import mail from "../assets/Icons/mail.png";
+import mailW from "../assets/Icons/mailW.png";
+import ContactForm from "../components/ContactForm.jsx";
+import { ThemeContext } from "../components/ThemeProvider.jsx";
+
+export default function Contact() {
+  const { darkMode, setDarkMode } = useContext(ThemeContext);
+
+  const makeCall = (phoneNumber) => {
+    // Function to make a call
+    window.location.href = `tel:${phoneNumber}`;
+  };
+
+  const sendEmail = (emailAddress) => {
+    // Function to open email client with pre-filled information
+    window.location.href = `mailto:${emailAddress}`;
+  };
+
+  const openInMaps = (location) => {
+    // Function to open location in Google Maps
+    window.open(
+      `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+        location
+      )}`,
+      "_blank"
+    );
+  };
+
+  //   return (
+  //     <div>
+  //       <div className="flex justify-center items-center w-full flex-col px-12 ">
+  //         <div className="flex flex-col justify-center items-center gap-3 w-full max-w-screen-2xl 2xl:mx-auto md:mx-20 mx-10 lg:mx-16 pt-16 ">
+  //           <h2 className="uppercase font-SagarFont font-bold text-3xl tracking-wider mt-5 text-black dark:text-white">
+  //             Contact
+  //           </h2>
+  //           <div className="flex gap-2 justify-center items-center">
+  //             <span className="font-SagarFont font-semibold text-md uppercase text-[#29a587] underline">
+  //               let's
+  //             </span>
+  //             <span className="font-SagarFont font-semibold text-md text-black dark:text-white">
+  //               Talk about ideas
+  //             </span>
+  //           </div>
+
+  //           {/* div for both loc and contactform */}
+  //           <div className="flex flex-col w-full lg:flex-row">
+  //             {/* div to wrap up location */}
+  //             <div className="mt-12 w-full flex flex-col">
+  //               {/* ADDRESS START HERE */}
+  //               <div className="flex gap-20 w-full justify-start items-center">
+  //                 <div className="relative border-[2px] rounded-full w-14 h-14 border-black dark:border-white flex justify-center items-center">
+  //                   {darkMode ? (
+  //                     <img className="w-11 h-11 p-[6px]" src={addressW} alt="" />
+  //                   ) : (
+  //                     <img className="w-11 h-11 p-[6px]" src={address} alt="" />
+  //                   )}
+  //                   <div className="absolute border-[1px] w-full right-[-100%] dark:border-white border-black"></div>
+  //                 </div>
+
+  //                 <div className="flex flex-col mt-4">
+  //                   <h3 className="font-SagarFont font-semibold text-xl text-black dark:text-white tracking-wider">
+  //                     Address
+  //                   </h3>
+  //                   <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] ">
+  //                     Chhatrakot, Gulmi, Nepal
+  //                   </h4>
+  //                 </div>
+  //               </div>
+
+  //               {/* FREELANCE START HERE */}
+
+  //               <div className="flex gap-20 w-full justify-start items-center">
+  //                 <div className="relative border-[2px] rounded-full w-14 h-14 border-black dark:border-white flex justify-center items-center">
+  //                   {darkMode ? (
+  //                     <img className="w-11 h-11 p-[6px]" src={freelaW} alt="" />
+  //                   ) : (
+  //                     <img className="w-11 h-11 p-[6px]" src={freela} alt="" />
+  //                   )}
+  //                   <div className="absolute border-[1px] w-full right-[-100%] dark:border-white border-black"></div>
+  //                 </div>
+
+  //                 <div className="flex flex-col mt-4">
+  //                   <h3 className="font-SagarFont font-semibold text-xl text-black dark:text-white tracking-wider">
+  //                     Freelance
+  //                   </h3>
+  //                   <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] ">
+  //                     Available Right Now
+  //                   </h4>
+  //                 </div>
+  //               </div>
+
+  //               {/* EMAIL START HERE */}
+  //               <div className="flex gap-20 w-full justify-start items-center">
+  //                 <div className="relative border-[2px] rounded-full w-14 h-14 border-black dark:border-white flex justify-center items-center">
+  //                   {darkMode ? (
+  //                     <img className="w-11 h-11 p-[6px]" src={mailW} alt="" />
+  //                   ) : (
+  //                     <img className="w-11 h-11 p-[6px]" src={mail} alt="" />
+  //                   )}
+  //                   <div className="absolute border-[1px] w-full right-[-100%] dark:border-white border-black"></div>
+  //                 </div>
+
+  //                 <div className="flex flex-col mt-4">
+  //                   <h3 className="font-SagarFont font-semibold text-xl text-black dark:text-white tracking-wider">
+  //                     Email
+  //                   </h3>
+  //                   <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] ">
+  //                     sagarchhetry333@gmail.com
+  //                   </h4>
+  //                 </div>
+  //               </div>
+
+  //               {/* PHONE START HERE */}
+  //               <div className="flex gap-20 w-full justify-start items-center">
+  //                 <div className="relative border-[2px] rounded-full w-14 h-14 border-black dark:border-white flex justify-center items-center">
+  //                   {darkMode ? (
+  //                     <img className="w-11 h-11 p-[6px]" src={contactW} alt="" />
+  //                   ) : (
+  //                     <img className="w-11 h-11 p-[6px]" src={contact} alt="" />
+  //                   )}
+  //                   <div className="absolute border-[1px] w-full right-[-100%] dark:border-white border-black"></div>
+  //                 </div>
+
+  //                 <div className="flex flex-col mt-4">
+  //                   <h3 className="font-SagarFont font-semibold text-xl text-black dark:text-white tracking-wider">
+  //                     Phone
+  //                   </h3>
+  //                   <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] ">
+  //                     +977-9860788076
+  //                   </h4>
+  //                 </div>
+  //               </div>
+  //             </div>
+  //               <ContactForm />
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </div>
+  //   );
+  // }
+  return (
+    <div>
+      <div className="flex justify-center items-center w-full flex-col px-12">
+        <div className="flex flex-col justify-center items-center gap-3 w-full max-w-screen-2xl 2xl:mx-auto md:mx-20 mx-10 lg:mx-16 pt-16">
+          <h2 className="uppercase font-SagarFont font-bold text-3xl tracking-wider mt-5 text-black dark:text-white">
+            Contact me
+          </h2>
+          <div className="flex gap-2 justify-center items-center">
+            <span className="font-SagarFont font-semibold text-md uppercase text-[#29a587] underline">
+              let's
+            </span>
+            <span className="font-SagarFont font-semibold text-md text-black dark:text-white">
+              Talk about ideas
+            </span>
+          </div>
+
+          {/* div for both loc and contactform */}
+          <div className="flex flex-col w-full lg:flex-row">
+            {/* div to wrap up location */}
+            <div className="mt-12 w-full flex flex-col lg:ml-16 lg:w-[80%] lg:gap-12 gap-8">
+              {/* ADDRESS START HERE */}
+              <div
+                className="flex gap-20 w-full justify-start items-center hover:cursor-pointer"
+                onClick={() => {
+                  openInMaps("chhatrakot,Gulmi,Nepal");
+                }}
+              >
+                <div className="relative border-[2px] rounded-full w-14 h-14 border-black dark:border-white flex justify-center items-center">
+                  <img
+                    className="w-11 h-11 p-[6px]"
+                    src={darkMode ? addressW : address}
+                    alt=""
+                  />
+                  <div className="absolute border-[1px] w-full right-[-100%] dark:border-white border-black"></div>
+                </div>
+
+                <div className="flex flex-col mt-4">
+                  <h3 className="font-SagarFont font-semibold text-xl text-black dark:text-white tracking-wider">
+                    Address
+                  </h3>
+                  <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b]">
+                    Chhatrakot, Gulmi, Nepal
+                  </h4>
+                </div>
+              </div>
+
+              {/* FREELANCE START HERE */}
+
+              <div className="flex gap-20 w-full justify-start items-center">
+                <div className="relative border-[2px] rounded-full w-14 h-14 border-black dark:border-white flex justify-center items-center">
+                  <img
+                    className="w-11 h-11 p-[6px]"
+                    src={darkMode ? freelaW : freela}
+                    alt=""
+                  />
+                  <div className="absolute border-[1px] w-full right-[-100%] dark:border-white border-black"></div>
+                </div>
+
+                <div className="flex flex-col mt-4">
+                  <h3 className="font-SagarFont font-semibold text-xl text-black dark:text-white tracking-wider">
+                    Freelance
+                  </h3>
+                  <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b]">
+                    Available Right Now
+                  </h4>
+                </div>
+              </div>
+
+              {/* EMAIL START HERE */}
+              <div
+                className="flex gap-20 w-full justify-start items-center hover:cursor-pointer"
+                onClick={() => {
+                  sendEmail("sagarchhetry333@gmail.com");
+                }}
+              >
+                <div className="relative border-[2px] rounded-full w-14 h-14 border-black dark:border-white flex justify-center items-center">
+                  <img
+                    className="w-11 h-11 p-[6px]"
+                    src={darkMode ? mailW : mail}
+                    alt=""
+                  />
+                  <div className="absolute border-[1px] w-full right-[-100%] dark:border-white border-black"></div>
+                </div>
+
+                <div className="flex flex-col mt-4">
+                  <h3 className="font-SagarFont font-semibold text-xl text-black dark:text-white tracking-wider">
+                    Email
+                  </h3>
+                  <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b]">
+                    sagarchhetry333@gmail.com
+                  </h4>
+                </div>
+              </div>
+
+              {/* PHONE START HERE */}
+              <div
+                className="flex gap-20 w-full justify-start items-center hover:cursor-pointer"
+                onClick={() => {
+                  makeCall("+977960788076");
+                }}
+              >
+                <div className="relative border-[2px] rounded-full w-14 h-14 border-black dark:border-white flex justify-center items-center">
+                  <img
+                    className="w-11 h-11 p-[6px]"
+                    src={darkMode ? contactW : contact}
+                    alt=""
+                  />
+                  <div className="absolute border-[1px] w-full right-[-100%] dark:border-white border-black"></div>
+                </div>
+
+                <div className="flex flex-col mt-4">
+                  <h3 className="font-SagarFont font-semibold text-xl text-black dark:text-white tracking-wider">
+                    Phone
+                  </h3>
+                  <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b]">
+                    +977-9860788076
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <ContactForm />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
