@@ -16,7 +16,7 @@ export default function Professional() {
         <h1 className="uppercase font-SagarFont font-bold text-lg lg:text-3xl tracking-wider mt-5 text-black dark:text-white">
           Professional skills
         </h1>
-        <h2 className="flex gap-1 items-center justify-center mb-5">
+        <h2 className="flex gap-2 items-center justify-center mb-5">
           <span className="uppercase font-SagarFont font-semibold text-[#29a587] underline">
             My
           </span>

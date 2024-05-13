@@ -162,15 +162,13 @@ export default function Contact() {
           </div>
 
           {/* div for both loc and contactform */}
-          <div className="flex flex-col w-full lg:flex-row">
+          <div className="flex flex-col w-full md:flex-row">
             {/* div to wrap up location */}
-            <div className="mt-12 w-full flex flex-col lg:ml-16 lg:w-[80%] lg:gap-12 gap-8">
+            <div className="mt-12 w-full flex flex-col lg:ml-16 md:w-[60%] lg:w-[80%] lg:gap-12 gap-8">
               {/* ADDRESS START HERE */}
               <div
-                className="flex gap-6 lg:gap-20 w-full justify-start items-center hover:cursor-pointer"
-                onClick={() => {
-                  openInMaps("chhatrakot,Gulmi,Nepal");
-                }}
+                className="flex gap-6 lg:gap-20 w-full justify-start items-center "
+
               >
                 <div className="relative border-[2px] rounded-full w-9 h-9 lg:w-14 lg:h-14 border-black dark:border-white flex justify-center items-center">
                   <img
@@ -185,7 +183,9 @@ export default function Contact() {
                 <h3 className="font-SagarFont font-semibold text-black dark:text-white tracking-wider text-lg lg:text-xl">
                     Address
                   </h3>
-                  <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] text-sm lg:text-lg">
+                  <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] text-sm lg:text-lg hover:cursor-pointer" onClick={() => {
+                  openInMaps("chhatrakot,Gulmi,Nepal");
+                }}>
                     Chhatrakot, Gulmi, Nepal
                   </h4>
                 </div>
@@ -194,7 +194,7 @@ export default function Contact() {
               {/* FREELANCE START HERE */}
 
               <div 
-                className="flex gap-6 lg:gap-20 w-full justify-start items-center hover:cursor-pointer">
+                className="flex gap-6 lg:gap-20 w-full justify-start items-center">
                 <div className="relative border-[2px] rounded-full w-9 h-9 lg:w-14 lg:h-14 border-black dark:border-white flex justify-center items-center">
                   <img
                     className="w-8 h-8 p-[5px] lg:w-11 lg:h-11 lg:p-[6px]"
@@ -216,10 +216,7 @@ export default function Contact() {
 
               {/* EMAIL START HERE */}
               <div
-                className="flex gap-6 lg:gap-20 w-full justify-start items-center hover:cursor-pointer"
-                onClick={() => {
-                  sendEmail("sagarchhetry333@gmail.com");
-                }}
+                className="flex gap-6 lg:gap-20 w-full justify-start items-center"
               >
                 <div className="relative border-[2px] rounded-full w-9 h-9 lg:w-14 lg:h-14 border-black dark:border-white flex justify-center items-center">
                   <img
@@ -234,7 +231,9 @@ export default function Contact() {
                 <h3 className="font-SagarFont font-semibold text-black dark:text-white tracking-wider text-lg lg:text-xl">
                     Email
                   </h3>
-                  <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] text-sm lg:text-lg">
+                  <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] text-sm lg:text-lg  hover:cursor-pointer" onClick={() => {
+                  sendEmail("sagarchhetry333@gmail.com");
+                }}>
                     sagarchhetry333@gmail.com
                   </h4>
                 </div>
@@ -242,10 +241,7 @@ export default function Contact() {
 
               {/* PHONE START HERE */}
               <div
-                className="flex gap-6 lg:gap-20 w-full justify-start items-center hover:cursor-pointer"
-                onClick={() => {
-                  makeCall("+977960788076");
-                }}
+                className="flex gap-6 lg:gap-20 w-full justify-start items-center "
               >
                 <div className="relative border-[2px] rounded-full w-9 h-9 lg:w-14 lg:h-14 border-black dark:border-white flex justify-center items-center">
                   <img
@@ -260,7 +256,10 @@ export default function Contact() {
                 <h3 className="font-SagarFont font-semibold text-black dark:text-white tracking-wider text-lg lg:text-xl">
                     Phone
                   </h3>
-                  <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] text-sm lg:text-lg">
+                  <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] text-sm lg:text-lg hover:cursor-pointer"
+                onClick={() => {
+                  makeCall("+977960788076");
+                }}>
                     +977-9860788076
                   </h4>
                 </div>

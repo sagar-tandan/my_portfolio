@@ -11,6 +11,7 @@ import winsta from "../assets/instawhite.png";
 import wtwi from "../assets/twitterwhite.png";
 import Professional from "./Professional";
 import Contact from "./Contact.jsx";
+import Projects from "./Projects.jsx";
 import { TypeAnimation } from "react-type-animation";
 import { ThemeContext } from "../components/ThemeProvider.jsx";
 
@@ -353,6 +354,11 @@ export default function Home() {
       <div id="skills" className="">
         <Professional />
       </div>
+
+      <div id="projects" className="">
+        <Projects />
+      </div>
+
 
       <div id="contact" className="">
         <Contact />

@@ -14,20 +14,20 @@ const SkillModel = [
     name: "Machine Learning",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ex, deleniti eaque repellendus porro dolorum sint?",
-    percentage: 70,
-    width: "w-[70%]",
-    rem:"w-[30%]",
-    left: "left-[68%]",
+    percentage: 50,
+    width: "w-[50%]",
+    rem:"w-[50%]",
+    left: "left-[47%]",
   },
   {
     id: 2,
     name: "React",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ex, deleniti eaque repellendus porro dolorum sint?",
-    percentage: 60,
-    width: "w-[60%]",
-    rem:"w-[40%]",
-    left: "left-[57%]",
+    percentage: 50,
+    width: "w-[50%]",
+    rem:"w-[50%]",
+    left: "left-[47%]",
   },
   {
     id: 3,
@@ -44,10 +44,10 @@ const SkillModel = [
     name: "Javascript",
     description:
       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam ex, deleniti eaque repellendus porro dolorum sint?",
-    percentage: 70,
-    width: "w-[70%]",
-    rem:"w-[30%]",
-    left: "left-[68%]",
+    percentage: 60,
+    width: "w-[60%]",
+    rem:"w-[40%]",
+    left: "left-[57%]",
   },
   {
     id: 5,

@@ -71,6 +71,20 @@ const HamburgerIconWhite = () => {
           </li>
         </a>
 
+        <a href="#projects">
+          <li
+            className={`hover:text-[#29a587] uppercase ${
+              activeMenuItem === "projects" ? "text-[#29a587]" : "text-white"
+            }`}
+            onClick={() => {
+              setActiveMenuItem("projects");
+              toggleIcon();
+            }}
+          >
+            Projects
+          </li>
+        </a>
+
         <a href="#contact">
           <li
             className={`hover:text-[#29a587] uppercase ${
