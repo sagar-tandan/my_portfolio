@@ -17,7 +17,7 @@ export default function () {
             <h2 className=" text-black uppercase font-SagarFont font-bold text-3xl dark:text-white ">
               sagar
             </h2>
-            <span className="absolute border-[3px] border-solid border-[#29a587] w-2 h-2 rounded-full flex justify-center items-center left-[89%]"></span>
+            <span className="absolute border-[3px] border-solid border-[#29a587] w-2 h-2 rounded-full flex justify-center items-center left-[89%] bottom-[36%]"></span>
           </div>
 
           <div className="flex justify-center items-center gap-3">

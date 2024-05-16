@@ -56,3 +56,18 @@ html{
 .animate-slide-out {
   animation: slideOut 0.5s ease-out forwards;
 }
+
+@keyframes SlideInSkill {
+  from{
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-skill {
+  animation: SlideInSkill 0.3s ease-in-out forwards;
+}

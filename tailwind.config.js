@@ -12,6 +12,19 @@ export default {
         'Midtown':['Midtown','Poppins','sans-serif'],     }
     },
   },
-  plugins: [],
-}
+  plugins: [
+    function({addUtilities}){
+      const newUtilities = {
+        ".no-Scrollbat ::-webkit-scrollbar":{
+          display:"none",
+        },
+        ".no-scrollbar":{
+          ".-ms-overflow-style": "none",
+          "scrollbar-width": "none",
+        },
+      };
+      addUtilities(newUtilities);
+    },
+  ],
+};
 

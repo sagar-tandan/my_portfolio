@@ -12,18 +12,28 @@ import wtwi from "../assets/twitterwhite.png";
 import Professional from "./Professional";
 import Contact from "./Contact.jsx";
 import Projects from "./Projects.jsx";
+import SlideLeftComponent from "../components/SlideLeftComponent.jsx";
 import { TypeAnimation } from "react-type-animation";
 import { ThemeContext } from "../components/ThemeProvider.jsx";
+import Developer from "../components/Developer.jsx";
+import SlideUpComponent from "../components/SlideUpComponent.jsx";
 
 export default function Home() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [display, setDisplay] = useState(false);
   const { darkMode, setDarkMode } = useContext(ThemeContext);
+
+  const handleDataFromChild = (data) => {
+    // Update parent component state with data from child
+    // setDataFromChild(data);
+    setDisplay(data);
+  };
 
   // useEffect to set initial screen size and add event listener
   useEffect(() => {
     // Function to check if screen is small
     const checkScreenSize = () => {
-      setIsSmallScreen(window.innerWidth <= 1023); // Example threshold for small screens
+      setIsSmallScreen(window.innerWidth <= 1023);
     };
 
     // Initial check
@@ -36,12 +46,20 @@ export default function Home() {
     return () => window.removeEventListener("resize", checkScreenSize);
   }); // Removed the empty dependency array
 
+  const loadDeveloper = () => {
+    setTimeout(() => {
+      setDisplay(true);
+    }, 300);
+  };
+
   return (
     <div className={darkMode ? "dark" : ""}>
       {isSmallScreen && (
-        <div className="flex flex-col justify-center items-center max-w-screen-lg pt-6">
+        <div
+          className={`flex flex-col justify-center items-center max-w-screen-lg pt-6`}
+        >
           {/* beginning of intro */}
-          <div className="w-full justify-center items-center flex gap-2">
+          <div className="w-full justify-center items-center flex gap-2 mx-auto">
             <span className="font-SagarFont font-semibold uppercase dark:text-white">
               Hello,
             </span>
@@ -49,7 +67,7 @@ export default function Home() {
               My name is
             </span>
           </div>
-          <div className="w-full flex gap-3 justify-center items-center font-extrabold uppercase text-[#29a587] font-SagarFont text-4xl my-2 font-outline-2 drop-shadow-[0_1.2px_1.2px_rgba(93,136,83,0.9)]">
+          <div className="w-full flex gap-3 justify-center items-center font-extrabold uppercase text-[#29a587] font-SagarFont text-4xl my-2 font-outline-2 drop-shadow-[0_1.2px_1.2px_rgba(93,136,83,0.9)] flex-wrap">
             <span>sagar </span> <span className="text-white">tandan</span>
           </div>
           <div className="flex gap-1 w-full justify-center items-center">
@@ -76,9 +94,9 @@ export default function Home() {
 
           {/* intro ended here */}
 
-          <div className="flex flex-col justify-center items-center lg:flex-row-reverse w-full ">
+          <div className="flex flex-col justify-center items-center lg:flex-row-reverse w-[90%] mx-auto">
             <div
-              className={`w-[300px] h-[300px] md:w-[500px] md:h-[500px] relative flex justify-center items-center mt-4`}
+              className={`w-[300px] h-[300px] md:w-[500px] md:h-[500px] relative flex justify-center items-center mt-4 mx-auto`}
             >
               <div className="w-[300px] h-[300px] md:w-[500px] md:h-[500px] rounded-full overflow-hidden relative">
                 <div className="relative w-[250px] h-[250px] bg-[#29a587] rounded-full top-[55px] left-[25px] md:w-[400px] md:h-[400px] md:top-[109px] md:left-[50px]"></div>
@@ -88,14 +106,30 @@ export default function Home() {
                   class="w-[370px] h-[370px] z-20 md:w-[500px] md:h-[590px] object-cover object-center rounded-full absolute top-[43%] left-[55%] md:top-[45%] md:left-[54%] transform -translate-x-1/2 -translate-y-1/2"
                 ></img>
               </div>
-              <div className="border-[1px] border-black bg-white w-[160px] h-[55px] md:w-[200px] md:h-[70px] rounded-full z-30 absolute bottom-13 left-[-10px] md:left-[-30px] dark:bg-gray-800 dark:border-white"></div>
+              <div className="border-[1px] border-black bg-white w-[160px] h-[55px] md:w-[200px] md:h-[70px] rounded-full z-30 absolute bottom-13 left-[-10px] md:left-[-30px] dark:bg-gray-800 dark:border-white flex justify-center items-center">
+                <h1
+                  onClick={loadDeveloper}
+                  className="text-green-500 font-SagarFont font-semibold text-sm hover:cursor-pointer hover:text-orange-600 active:scale-95 transition-all ease-in-out duration-300"
+                >
+                  &lt;Developer Mode /&gt;
+                </h1>
+              </div>
               <div className="border-[1px] border-black bg-white w-[160px] h-[55px] md:w-[200px] md:h-[70px]  rounded-full z-30 absolute bottom-2 right-[1px] md:right-2 dark:bg-gray-800 dark:border-white"></div>
             </div>
 
             <div className="flex flex-col justify-center items-center mt-12 w-[80%] md:w-1/2">
-              <div className="font-SagarFont text-[#655b4b] dark:text-white">
-                From France, Paris. I have rich experience in web design, also I
-                am good at wordpress. I love to talk with you about our unique.
+              <div className="font-SagarFont text-[#655b4b] dark:text-white flex flex-col gap-2 mb-3">
+                <p>
+                  From Gulmi, Nepal. I have rich experience in web developement.
+                  I build web apps from scratch, juggling both frontend and
+                  backend effortlessly.
+                </p>
+
+                <p>
+                  When I'm not coding, you'll find me at the gym, lifting
+                  weights and staying fit. I focus on balancing both bytes and
+                  biceps.
+                </p>
               </div>
 
               <div className="flex w-full sm:w-1/2  justify-around mt-6 ">
@@ -231,10 +265,19 @@ export default function Home() {
               </span>
             </div>
 
-            <div className="flex flex-col justify-center items-center mt-8 ">
-              <div className="font-SagarFont text-[#423a2f] dark:text-white">
-                From France, Paris. I have rich experience in web design, also I
-                am good at wordpress. I love to talk with you about our unique.
+            <div className="flex flex-col justify-center items-center mt-8 w-[90%]">
+              <div className="font-SagarFont text-[#655b4b] dark:text-white flex flex-col gap-2 mb-4">
+                <p>
+                  From Gulmi, Nepal. I have rich experience in web developement.
+                  I build web apps from scratch, juggling both frontend and
+                  backend effortlessly.
+                </p>
+
+                <p>
+                  When I'm not coding, you'll find me at the gym, lifting
+                  weights and staying fit. I focus on balancing both bytes and
+                  biceps.
+                </p>
               </div>
 
               <div className="flex w-full justify-start gap-5 mt-6 ">
@@ -333,7 +376,6 @@ export default function Home() {
           </div>
 
           {/* intro ended here */}
-
           <div className="flex flex-col lg:flex-row-reverse w-full mb-4 mr-32">
             <div className="w-[500px] h-[500px] relative flex justify-center items-center">
               <div className="w-[500px] h-[500px] rounded-full overflow-hidden relative">
@@ -344,10 +386,23 @@ export default function Home() {
                   class="w-[500px] h-[590px] z-20 object-cover object-center rounded-full absolute top-[45%] left-[54%] transform -translate-x-1/2 -translate-y-1/2"
                 ></img>
               </div>
-              <div className="border-[1px] border-black bg-white w-[200px] h-[70px] rounded-full z-30 absolute bottom-13 left-[-30px] dark:bg-gray-800 dark:border-white transition-all ease-in-out duration-300"></div>
+              <div className="flex flex-col border-[1px] border-black bg-white w-[200px] h-[70px] rounded-full z-30 absolute bottom-13 left-[-30px] dark:bg-gray-800 dark:border-white transition-all ease-in-out duration-300 justify-center items-center">
+                <h1
+                  onClick={loadDeveloper}
+                  className=" text-[#29a587] font-SagarFont font-semibold text-md hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300 hover:text-orange-600"
+                >
+                  &lt;Developer Mode /&gt;
+                </h1>
+              </div>
               <div className="border-[1px] border-black bg-white w-[200px] h-[70px] rounded-full z-30 absolute bottom-2 right-3 dark:bg-gray-800 dark:border-white transition-all ease-in-out duration-300"></div>
             </div>
           </div>
+        </div>
+      )}
+
+      {display && (
+        <div id="developer">
+          <Developer sendDataToParent={handleDataFromChild} />
         </div>
       )}
 
@@ -358,7 +413,6 @@ export default function Home() {
       <div id="projects" className="">
         <Projects />
       </div>
-
 
       <div id="contact" className="">
         <Contact />
