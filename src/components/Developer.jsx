@@ -1,8 +1,5 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import back from "../assets/Icons/back.png";
-import folder from "../assets/Icons/folder.png";
-import branch from "../assets/Icons/branch.png";
-import crown from "../assets/Icons/crown.png";
 import TerminalDesign from "./TerminalDesign";
 import sagar from "../assets/tandan.jpeg";
 import arrow2 from "../assets/Icons/arrow2.png";
@@ -13,7 +10,21 @@ import insta from "../assets/instah.png";
 import SkillDeveloper from "./SkillDeveloper";
 const Developer = ({ sendDataToParent }) => {
   const [currentCommand, setCurrentCommand] = useState("");
-  const [outputs, setOutputs] = useState([]);
+  const [outputs, setOutputs] = useState([
+    <div>
+      <TerminalDesign />
+      <div>
+        <img
+          className="w-5 h-5 sm:w-7 sm:h-7 mx-4 sm:mx-8 mt-3 mb-1"
+          src={arrow2}
+          alt=""
+        />
+        <h1 className="text-white font-SagarFont text-lg sm:text-2xl font-semibold px-4 sm:px-8 mb-4">
+          Welcome to my Terminal !!
+        </h1>
+      </div>
+    </div>,
+  ]);
   const [project, SetProject] = useState([
     {
       id: 0,
