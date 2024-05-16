@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import ProjectData from "./Data/ProjectData.jsx";
 import SlideUpComponent from "../components/SlideUpComponent.jsx";
 import arrow from "../assets/arrow.png";
-import { div } from "@tensorflow/tfjs";
 
 export default function Projects() {
   const [data, setData] = useState([]);
