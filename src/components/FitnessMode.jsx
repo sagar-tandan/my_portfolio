@@ -134,12 +134,12 @@ const FitnessMode = ({ sendDataToParent }) => {
               </div>
 
               <div className="flex flex-col gap-1 justify-start items-start font-SagarFont font-medium text-sm sm:text-lg text-white">
-                <h1>Show my current bodyweight and age</h1>
-                <h1>Show my personal records on Gym</h1>
-                <h1>Show my workout splits in details</h1>
-                <h1>Display my whole day of eating</h1>
-                <h1>Display some of my gym pictures</h1>
-                <h1>Show my contact details</h1>
+                <h1>Weight and age</h1>
+                <h1>Personal records</h1>
+                <h1>Workout split</h1>
+                <h1>Whole day of eating</h1>
+                <h1>Gym pictures</h1>
+                <h1>Contact details</h1>
                 <h1>Clear the Terminal</h1>
                 <h1>Exit the Terminal</h1>
               </div>
@@ -160,7 +160,7 @@ const FitnessMode = ({ sendDataToParent }) => {
                 src={arrow2}
                 alt=""
               />
-              <h1 className="bg-none text-red-600 outline-none bg-black opacity-95 w-full font-SagarFont font-semibold text-lg mt-3">
+              <h1 className="bg-none text-red-600 outline-none bg-black opacity-95 w-full font-SagarFont font-medium sm:font-semibold text-sm sm:text-lg mt-3">
                 I think you need to hit the gym!
               </h1>
             </div>
@@ -196,7 +196,7 @@ const FitnessMode = ({ sendDataToParent }) => {
               </h1>
             </div>
 
-            <div className="flex flex-row gap-6 px-4 sm:px-8 mt-3">
+            <div className="flex flex-row gap-5 px-4 sm:px-8 mt-3">
               <div className="flex flex-col gap-1 justify-start items-start font-SagarFont font-semibold text-sm sm:text-lg text-green-600">
                 <h1>bw</h1>
                 <h1>pr</h1>
@@ -209,12 +209,12 @@ const FitnessMode = ({ sendDataToParent }) => {
               </div>
 
               <div className="flex flex-col gap-1 justify-start items-start font-SagarFont font-medium text-sm sm:text-lg text-white">
-                <h1>Show my current bodyweight and age</h1>
-                <h1>Show my personal records on Gym</h1>
-                <h1>Show my workout splits in details</h1>
-                <h1>Display my whole day of eating</h1>
-                <h1>Display some of my gym pictures</h1>
-                <h1>Show my contact details</h1>
+                <h1>Weight and age</h1>
+                <h1>Personal records</h1>
+                <h1>Workout split</h1>
+                <h1>Whole day of eating</h1>
+                <h1>Gym pictures</h1>
+                <h1>Contact details</h1>
                 <h1>Clear the Terminal</h1>
                 <h1>Exit the Terminal</h1>
               </div>
@@ -309,24 +309,24 @@ const FitnessMode = ({ sendDataToParent }) => {
                 <h1 className="font-SagarFont text-lg font-semibold">
                   Day 1: Push Day
                 </h1>
-                <div className="flex flex-row gap-4 font-SagarFont font-light">
+                <div className="flex flex-row gap-2 sm:gap-6 font-SagarFont font-light">
                   <div className="flex flex-col ">
-                    <h1>1. Incline DB Press</h1>
-                    <h1>2. Flat Machine Press</h1>
-                    <h1>3. Cable Chest Fly</h1>
-                    <h1>4. DB Shoulder Press</h1>
-                    <h1>5. Triceps Pushdown</h1>
+                    <h1>1. Incline DB</h1>
+                    <h1>2. Flat Machine</h1>
+                    <h1>3. Cable Fly</h1>
+                    <h1>4. Shoulder Press</h1>
+                    <h1>5. Rope Pushdown</h1>
                     <h1>6. Skull Crusher </h1>
                     <h1>6. Lateral Raise </h1>
                   </div>
 
                   <div className="flex flex-col">
-                    <h1>3 sets X 12 reps</h1>
-                    <h1>3 sets X 12 reps</h1>
-                    <h1>2 sets X 15 reps</h1>
-                    <h1>2 sets X 12 reps</h1>
-                    <h1>3 sets X 15 reps</h1>
-                    <h1>3 sets X 12 reps</h1>
+                    <h1>3 X 12 reps</h1>
+                    <h1>3 X 12 reps</h1>
+                    <h1>2 X 15 reps</h1>
+                    <h1>2 X 12 reps</h1>
+                    <h1>3 X 15 reps</h1>
+                    <h1>3 X 12 reps</h1>
                     <h1>120 reps</h1>
                   </div>
                 </div>
@@ -334,48 +334,48 @@ const FitnessMode = ({ sendDataToParent }) => {
                 <h1 className="font-SagarFont text-lg font-semibold mt-5">
                   Day 2: Pull Day
                 </h1>
-                <div className="flex flex-row gap-4 font-SagarFont font-light">
+                <div className="flex flex-row gap-2 sm:gap-6 font-SagarFont font-light">
                   <div className="flex flex-col ">
                     <h1>1. PullUps</h1>
                     <h1>2. Cable rows</h1>
                     <h1>3. Lats Pulldown</h1>
                     <h1>4. Rear Delt Fly</h1>
                     <h1>5. DB Shrugs</h1>
-                    <h1>6. DB Alternate Curl </h1>
+                    <h1>6. DB Alt. Curl </h1>
                     <h1>6. Hammer Curl </h1>
                   </div>
 
                   <div className="flex flex-col">
-                    <h1>3 sets X AMRSP</h1>
-                    <h1>3 sets X 12 reps</h1>
-                    <h1>3 sets X 12 reps</h1>
-                    <h1>2 sets X 12 reps</h1>
-                    <h1>2 sets X 15 reps</h1>
-                    <h1>3 sets X 12 reps</h1>
-                    <h1>3 sets X 12 reps</h1>
+                    <h1>3 X AMRSP</h1>
+                    <h1>3 X 12 reps</h1>
+                    <h1>3 X 12 reps</h1>
+                    <h1>2 X 12 reps</h1>
+                    <h1>2 X 15 reps</h1>
+                    <h1>3 X 12 reps</h1>
+                    <h1>3 X 12 reps</h1>
                   </div>
                 </div>
 
                 <h1 className="font-SagarFont text-lg font-semibold mt-5">
                   Day 3: Leg Day
                 </h1>
-                <div className="flex flex-row gap-4 font-SagarFont font-light">
+                <div className="flex flex-row gap-2 sm:gap-6 font-SagarFont font-light">
                   <div className="flex flex-col ">
                     <h1>1. Squats</h1>
-                    <h1>2. Hamstring Curl</h1>
-                    <h1>3. Leg Extension</h1>
-                    <h1>4. Calves Raises</h1>
+                    <h1>2. Ham Curl</h1>
+                    <h1>3. Leg Ext.</h1>
+                    <h1>4. Calf Raise</h1>
                   </div>
 
                   <div className="flex flex-col">
-                    <h1>4 sets X 8reps (Heavy)</h1>
-                    <h1>3 sets X 12 reps</h1>
-                    <h1>3 sets X 12 reps</h1>
-                    <h1>4 sets X 12 reps</h1>
+                    <h1>4 X 8 reps</h1>
+                    <h1>3 X 12 reps</h1>
+                    <h1>3 X 12 reps</h1>
+                    <h1>4 X 12 reps</h1>
                   </div>
                 </div>
 
-                <h1 className="font-SagarFont text-lg font-semibold mt-5">
+                <h1 className="font-SagarFont text-sm sm:text-lg  font-semibold mt-5">
                   Repeat for day 4,5,6 and day 7 Rest
                 </h1>
               </div>
@@ -406,11 +406,11 @@ const FitnessMode = ({ sendDataToParent }) => {
                 <h1 className="font-SagarFont text-lg font-semibold">
                   Meal 1 : 600 Calories
                 </h1>
-                <div className="flex flex-row gap-4 font-SagarFont font-light">
+                <div className="flex flex-row gap-2 sm:gap-6 font-SagarFont font-light">
                   <div className="flex flex-col ">
-                    <h1>1. Brown Bread (4 slices)</h1>
+                    <h1>1. Brown Bread (4slc)</h1>
                     <h1>2. Eggs (2) </h1>
-                    <h1>3. Peanut Butter (16 gm)</h1>
+                    <h1>3. PB(16gm)</h1>
                     <h1>4. Banana (1) </h1>
                   </div>
 
@@ -425,10 +425,10 @@ const FitnessMode = ({ sendDataToParent }) => {
                 <h1 className="font-SagarFont text-lg font-semibold mt-5">
                   Meal 2 : 512 Calories
                 </h1>
-                <div className="flex flex-row gap-4 font-SagarFont font-light">
+                <div className="flex flex-row gap-2 sm:gap-6 font-SagarFont font-light">
                   <div className="flex flex-col ">
                     <h1>1. Rice (150gm)</h1>
-                    <h1>2. Yellow Moong Dal </h1>
+                    <h1>2. Moong Dal </h1>
                     <h1>3. Chana (50gm)</h1>
                   </div>
 
@@ -442,13 +442,13 @@ const FitnessMode = ({ sendDataToParent }) => {
                 <h1 className="font-SagarFont text-lg font-semibold mt-5">
                   Meal 3 : 650 Calories
                 </h1>
-                <div className="flex flex-row gap-4 font-SagarFont font-light">
+                <div className="flex flex-row gap-2 sm:gap-6 font-SagarFont font-light">
                   <div className="flex flex-col ">
-                    <h1>1. Soya Chunks (50gm)</h1>
+                    <h1>1. Soyachunks (50gm)</h1>
                     <h1>2. Eggs (2) </h1>
-                    <h1>3. Peanut Butter (16 gm)</h1>
+                    <h1>3. PB (16gm)</h1>
                     <h1>4. Banana (1) </h1>
-                    <h1>5. Brown Bread (2 Slices) </h1>
+                    <h1>5. Brown Bread (2slc) </h1>
                   </div>
 
                   <div className="flex flex-col">
@@ -463,7 +463,7 @@ const FitnessMode = ({ sendDataToParent }) => {
                 <h1 className="font-SagarFont text-lg font-semibold mt-5">
                   Meal 4 : 456 cal
                 </h1>
-                <div className="flex flex-row gap-4 font-SagarFont font-light">
+                <div className="flex flex-row gap-2 sm:gap-6 font-SagarFont font-light">
                   <div className="flex flex-col ">
                     <h1>1. White Oats (100gm)</h1>
                     <h1>2. Banana (1) </h1>
@@ -478,7 +478,7 @@ const FitnessMode = ({ sendDataToParent }) => {
                 <h1 className="font-SagarFont text-lg font-semibold mt-5">
                   Meal 5 : 250 Calories
                 </h1>
-                <div className="flex flex-row gap-4 font-SagarFont font-light">
+                <div className="flex flex-row gap-2 sm:gap-6 font-SagarFont font-light">
                   <div className="flex flex-col ">
                     <h1>1. Rice (100gm)</h1>
                     <h1>2. Chicken (200gm) </h1>
@@ -490,6 +490,15 @@ const FitnessMode = ({ sendDataToParent }) => {
                     <h1>220 cal</h1>
                     <h1>--</h1>
                   </div>
+                </div>
+
+                <div className="flex gap-1 flex-col mt-5">
+                  <h1 className="font-SagarFont text-sm font-medium">
+                    <span className="text-red-600">PB </span> : Peanut Butter
+                  </h1>
+                  <h1 className="font-SagarFont text-sm font-medium">
+                    <span className="text-red-600">slc </span> : Slice
+                  </h1>
                 </div>
 
                 <h1 className="font-SagarFont text-sm font-medium mt-5">
@@ -535,7 +544,7 @@ const FitnessMode = ({ sendDataToParent }) => {
                       ); // Open the link in a new tab after 0.3 second
                     }, 300);
                   }}
-                  className="text-lg hover:underline  font-SagarFont font-medium text-white hover:cursor-pointer active:scale-95 transition-all duration-300 ease-in-out"
+                  className="text-sm sm:text-lg hover:underline font-SagarFont font-light sm:font-medium text-white hover:cursor-pointer active:scale-95 transition-all duration-300 ease-in-out"
                 >
                   Sagartandan_
                 </h2>
@@ -553,7 +562,7 @@ const FitnessMode = ({ sendDataToParent }) => {
                       ); // Open the link in a new tab after 0.3 second
                     }, 300);
                   }}
-                  className="text-lg hover:underline  font-SagarFont font-medium text-white hover:cursor-pointer active:scale-95 transition-all duration-300 ease-in-out"
+                  className="text-sm sm:text-lg hover:underline  font-SagarFont font-light sm:font-medium text-white hover:cursor-pointer active:scale-95 transition-all duration-300 ease-in-out"
                 >
                   SagarTanda882
                 </h2>
@@ -568,7 +577,7 @@ const FitnessMode = ({ sendDataToParent }) => {
                       window.open("mailto:sagarchhetry333@gmail.com", "_blank"); // Open the link in a new tab after 0.3 second
                     }, 300);
                   }}
-                  className="hover:underline text-lg font-SagarFont font-medium text-white hover:cursor-pointer active:scale-95 transition-all duration-300 ease-in-out"
+                  className="hover:underline text-sm sm:text-lg font-SagarFont font-light sm:font-medium text-white hover:cursor-pointer active:scale-95 transition-all duration-300 ease-in-out"
                 >
                   sagarchhetry333@gmail.com
                 </h2>

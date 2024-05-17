@@ -145,7 +145,7 @@ const Developer = ({ sendDataToParent }) => {
               </h1>
             </div>
 
-            <div className="flex flex-row gap-6 px-4 sm:px-8 mt-3">
+            <div className="flex flex-row gap-5 px-4 sm:px-8 mt-3">
               <div className="flex flex-col gap-1 justify-start items-start font-SagarFont font-semibold text-sm sm:text-lg text-green-600">
                 <h1>bio</h1>
                 <h1>skills</h1>
@@ -157,10 +157,11 @@ const Developer = ({ sendDataToParent }) => {
               </div>
 
               <div className="flex flex-col gap-1 justify-start items-start font-SagarFont font-medium text-sm sm:text-lg text-white">
-                <h1>Show my bio information</h1>
+                <h1>Show my bio info.</h1>
                 <h1>List out all my skills</h1>
                 <h1>List out my projects</h1>
-                <h1>Diplay some of my pictures</h1>
+                <h1>Display gallery</h1>
+                <h1>Display contact details</h1>
                 <h1>Clear the Terminal</h1>
                 <h1>Exit the Terminal</h1>
               </div>
@@ -313,7 +314,7 @@ const Developer = ({ sendDataToParent }) => {
                       window.open("https://github.com/sagar-tandan", "_blank"); // Open the link in a new tab after 0.3 second
                     }, 300);
                   }}
-                  className="text-lg font-SagarFont font-medium text-[#2da689] hover:cursor-pointer hover:underline active:scale-95 transition-all duration-300 ease-in-out"
+                  className="text-sm sm:text-lg font-light font-SagarFont sm:font-medium text-[#2da689] hover:cursor-pointer hover:underline active:scale-95 transition-all duration-300 ease-in-out"
                 >
                   sagar-tandan
                 </h2>
@@ -332,7 +333,7 @@ const Developer = ({ sendDataToParent }) => {
                       ); // Open the link in a new tab after 0.3 second
                     }, 300);
                   }}
-                  className="text-lg hover:underline  font-SagarFont font-medium text-[#2da689] hover:cursor-pointer active:scale-95 transition-all duration-300 ease-in-out"
+                  className="text-sm sm:text-lg font-light font-SagarFont sm:font-medium hover:underline text-[#2da689] hover:cursor-pointer active:scale-95 transition-all duration-300 ease-in-out"
                 >
                   Sagartandan_
                 </h2>
@@ -350,7 +351,7 @@ const Developer = ({ sendDataToParent }) => {
                       ); // Open the link in a new tab after 0.3 second
                     }, 300);
                   }}
-                  className="text-lg hover:underline  font-SagarFont font-medium text-[#2da689] hover:cursor-pointer active:scale-95 transition-all duration-300 ease-in-out"
+                  className="text-sm sm:text-lg font-light font-SagarFont sm:font-medium hover:underline text-[#2da689] hover:cursor-pointer active:scale-95 transition-all duration-300 ease-in-out"
                 >
                   SagarTanda882
                 </h2>
@@ -365,7 +366,7 @@ const Developer = ({ sendDataToParent }) => {
                       window.open("mailto:sagarchhetry333@gmail.com", "_blank"); // Open the link in a new tab after 0.3 second
                     }, 300);
                   }}
-                  className="hover:underline text-lg font-SagarFont font-medium text-[#2da689] hover:cursor-pointer active:scale-95 transition-all duration-300 ease-in-out"
+                  className="hover:underline text-sm sm:text-lg font-light font-SagarFont sm:font-medium text-[#2da689] hover:cursor-pointer active:scale-95 transition-all duration-300 ease-in-out"
                 >
                   sagarchhetry333@gmail.com
                 </h2>
