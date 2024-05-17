@@ -56,32 +56,43 @@ export default function Projects() {
                     </p>
 
                     <div className="w-full flex flex-row justify-between items-center flex-wrap">
-                      <a href={each.link} target="_blank">
-                        <div className=" font-semibold text-black text-sm sm:text-md dark:text-white flex mt-2 justify-start items-center gap-3 hover:cursor-pointer group hover:underline active:scale-95 transition-all ease-in-out duration-300">
-                          <h1>View Project</h1>
+                      <div
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setTimeout(() => {
+                            window.open(each.link, "_blank"); // Open the link in a new tab after 0.3 second
+                          }, 300);
+                        }}
+                        className=" font-semibold text-black text-sm sm:text-md dark:text-white flex mt-2 justify-start items-center gap-3 hover:cursor-pointer group hover:underline active:scale-95 transition-all ease-in-out duration-300"
+                      >
+                        <h1>View Project</h1>
+                        <img
+                          className=" w-4 h-4  group-hover:translate-x-1 transition-all ease-linear duration-300"
+                          src={arrow}
+                          alt="arrow"
+                        />
+                      </div>
+                      {each.github ? (
+                        <div
+                          onClick={(e) => {
+                            e.preventDefault();
+                            setTimeout(() => {
+                              window.open(each.github, "_blank"); // Open the link in a new tab after 0.3 second
+                            }, 300);
+                          }}
+                          className=" font-semibold text-black text-sm sm:text-md dark:text-white flex mt-2 justify-start items-center gap-3 hover:cursor-pointer group hover:underline active:scale-95 transition-all ease-in-out duration-300"
+                        >
+                          <h1>Github Code</h1>
                           <img
                             className=" w-4 h-4  group-hover:translate-x-1 transition-all ease-linear duration-300"
                             src={arrow}
                             alt="arrow"
                           />
                         </div>
-                      </a>
-                      {each.github ?  (
-                        <a href={each.github} target="_blank">
-                          <div className=" font-semibold text-black text-sm sm:text-md dark:text-white flex mt-2 justify-start items-center gap-3 hover:cursor-pointer group hover:underline active:scale-95 transition-all ease-in-out duration-300">
-                            <h1>Github Code</h1>
-                            <img
-                              className=" w-4 h-4  group-hover:translate-x-1 transition-all ease-linear duration-300"
-                              src={arrow}
-                              alt="arrow"
-                            />
-                          </div>
-                        </a>
-                      ):(
+                      ) : (
                         <div className=" font-semibold text-sm sm:text-md flex mt-2 justify-start items-center gap-3 text-red-500">
-                            <h1>No Github Link</h1>
-
-                          </div>
+                          <h1>No Github Link</h1>
+                        </div>
                       )}
                     </div>
                   </div>

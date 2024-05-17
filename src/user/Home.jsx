@@ -12,21 +12,26 @@ import wtwi from "../assets/twitterwhite.png";
 import Professional from "./Professional";
 import Contact from "./Contact.jsx";
 import Projects from "./Projects.jsx";
-import SlideLeftComponent from "../components/SlideLeftComponent.jsx";
 import { TypeAnimation } from "react-type-animation";
 import { ThemeContext } from "../components/ThemeProvider.jsx";
 import Developer from "../components/Developer.jsx";
-import SlideUpComponent from "../components/SlideUpComponent.jsx";
+import { motion, AnimatePresence } from "framer-motion";
+import FitnessMode from "../components/FitnessMode.jsx";
 
 export default function Home() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [display, setDisplay] = useState(false);
+  const [display1, setDisplay1] = useState(false);
   const { darkMode, setDarkMode } = useContext(ThemeContext);
 
   const handleDataFromChild = (data) => {
     // Update parent component state with data from child
-    // setDataFromChild(data);
     setDisplay(data);
+  };
+
+  const handleDataFromChild1 = (data) => {
+    // Update parent component state with data from child
+    setDisplay1(data);
   };
 
   // useEffect to set initial screen size and add event listener
@@ -49,6 +54,12 @@ export default function Home() {
   const loadDeveloper = () => {
     setTimeout(() => {
       setDisplay(true);
+    }, 300);
+  };
+
+  const loadFitness = () => {
+    setTimeout(() => {
+      setDisplay1(true);
     }, 300);
   };
 
@@ -78,11 +89,13 @@ export default function Home() {
             <span className="uppercase font-SagarFont font-semibold text-[#29a587]">
               <TypeAnimation
                 sequence={[
-                  "Web developer",
+                  "Computer Engineer ",
                   1000,
-                  "App developer",
+                  "Web developer ",
                   1000,
-                  "Gym instructor",
+                  "App developer ",
+                  1000,
+                  "Gym instructor ",
                   1000,
                 ]}
                 wrapper="span"
@@ -109,20 +122,28 @@ export default function Home() {
               <div className="border-[1px] border-black bg-white w-[160px] h-[55px] md:w-[200px] md:h-[70px] rounded-full z-30 absolute bottom-13 left-[-10px] md:left-[-30px] dark:bg-gray-800 dark:border-white flex justify-center items-center">
                 <h1
                   onClick={loadDeveloper}
-                  className="text-green-500 font-SagarFont font-semibold text-sm hover:cursor-pointer hover:text-orange-600 active:scale-95 transition-all ease-in-out duration-300"
+                  className="text-[#29a587] font-SagarFont font-semibold text-sm hover:cursor-pointer hover:text-orange-600 active:scale-95 transition-all ease-in-out duration-300"
                 >
                   &lt;Developer Mode /&gt;
                 </h1>
               </div>
-              <div className="border-[1px] border-black bg-white w-[160px] h-[55px] md:w-[200px] md:h-[70px]  rounded-full z-30 absolute bottom-2 right-[1px] md:right-2 dark:bg-gray-800 dark:border-white"></div>
+              <div className="border-[1px] border-black bg-white w-[160px] h-[55px] md:w-[200px] md:h-[70px]  rounded-full z-30 absolute bottom-2 right-[1px] md:right-2 dark:bg-gray-800 dark:border-white flex justify-center items-center">
+                <h1
+                  onClick={loadFitness}
+                  className="text-[#29a587] font-SagarFont font-semibold text-sm hover:cursor-pointer hover:text-orange-600 active:scale-95 transition-all ease-in-out duration-300"
+                >
+                  &lt;Fitness Mode /&gt;
+                </h1>
+              </div>
             </div>
 
             <div className="flex flex-col justify-center items-center mt-12 w-[80%] md:w-1/2">
               <div className="font-SagarFont text-[#655b4b] dark:text-white flex flex-col gap-2 mb-3">
                 <p>
-                  From Gulmi, Nepal. I have rich experience in web developement.
-                  I build web apps from scratch, juggling both frontend and
-                  backend effortlessly.
+                  From Gulmi, Nepal. I have extensive experience in web
+                  development, building web apps from scratch with a strong
+                  grasp of both frontend and backend aspects. However, my
+                  expertise and passion lie primarily in frontend development.
                 </p>
 
                 <p>
@@ -133,89 +154,116 @@ export default function Home() {
               </div>
 
               <div className="flex w-full sm:w-1/2  justify-around mt-6 ">
-                <a
-                  href="https://www.facebook.com/sagartandan333"
-                  target="_blank"
-                  rel="noreferrer "
+                <div
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setTimeout(() => {
+                      window.open(
+                        "https://www.facebook.com/sagartandan333",
+                        "_blank"
+                      ); // Open the link in a new tab after 0.3 second
+                    }, 300);
+                  }}
+                  class="group relative hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
                 >
-                  <div class="group relative hover:cursor-pointer">
-                    {darkMode ? (
-                      <img
-                        src={wfb}
-                        alt="Normal Image"
-                        class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
-                      />
-                    ) : (
-                      <img
-                        src={fb}
-                        alt="Normal Image"
-                        class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
-                      />
-                    )}
+                  {darkMode ? (
+                    <img
+                      src={wfb}
+                      alt="Normal Image"
+                      class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
+                    />
+                  ) : (
+                    <img
+                      src={fb}
+                      alt="Normal Image"
+                      class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
+                    />
+                  )}
 
-                    <img
-                      src={fbhover}
-                      alt="Hover Image"
-                      class="w-7 h-6  absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
-                    />
-                  </div>
-                </a>
+                  <img
+                    src={fbhover}
+                    alt="Hover Image"
+                    class="w-7 h-6  absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
+                  />
+                </div>
 
-                <a
-                  href="https://twitter.com/SagarTanda882"
-                  target="_blank"
-                  rel="noreferrer "
+                <div
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setTimeout(() => {
+                      window.open(
+                        "https://twitter.com/SagarTanda882",
+                        "_blank"
+                      ); // Open the link in a new tab after 0.3 second
+                    }, 300);
+                  }}
+                  class="group relative hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
                 >
-                  <div class="group relative hover:cursor-pointer">
-                    {darkMode ? (
-                      <img
-                        src={wtwi}
-                        alt="Normal Image"
-                        class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
-                      />
-                    ) : (
-                      <img
-                        src={twitter}
-                        alt="Normal Image"
-                        class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
-                      />
-                    )}
+                  {darkMode ? (
                     <img
-                      src={twitterh}
-                      alt="Hover Image"
-                      class="w-7 h-7 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
+                      src={wtwi}
+                      alt="Normal Image"
+                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
                     />
-                  </div>
-                </a>
-                <a
-                  href="https://www.instagram.com/sagartandan_/"
-                  target="_blank"
-                  rel="noreferrer "
+                  ) : (
+                    <img
+                      src={twitter}
+                      alt="Normal Image"
+                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                    />
+                  )}
+                  <img
+                    src={twitterh}
+                    alt="Hover Image"
+                    class="w-7 h-7 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
+                  />
+                </div>
+
+                <div
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setTimeout(() => {
+                      window.open(
+                        "https://www.instagram.com/sagartandan_/",
+                        "_blank"
+                      ); // Open the link in a new tab after 0.3 second
+                    }, 300);
+                  }}
+                  class="group relative hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
                 >
-                  <div class="group relative hover:cursor-pointer">
-                    {darkMode ? (
-                      <img
-                        src={winsta}
-                        alt="Normal Image"
-                        class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
-                      />
-                    ) : (
-                      <img
-                        src={insta}
-                        alt="Normal Image"
-                        class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
-                      />
-                    )}
+                  {darkMode ? (
                     <img
-                      src={instah}
-                      alt="Hover Image"
-                      class="w-7 h-7 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
+                      src={winsta}
+                      alt="Normal Image"
+                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
                     />
-                  </div>
-                </a>
+                  ) : (
+                    <img
+                      src={insta}
+                      alt="Normal Image"
+                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                    />
+                  )}
+                  <img
+                    src={instah}
+                    alt="Hover Image"
+                    class="w-7 h-7 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
+                  />
+                </div>
               </div>
 
-              <div className="w-full flex justify-center items-center mt-2">
+              <div
+                onClick={(e) => {
+                  e.preventDefault();
+                  setTimeout(() => {
+                    window.open(
+                      "https://drive.google.com/file/d/19DBaYB7tMkggw9sH3LvPJLb1u6J47rk-/view?usp=sharing",
+                      "_blank"
+                    ); // Open the link in a new tab after 0.3 second
+                  }, 300);
+                }}
+                className="w-full flex justify-center items-center mt-2"
+              >
                 <div className="group relative w-full sm:w-[70%] my-5 flex justify-center items-center">
                   <span className="w-full flex justify-center items-center uppercase font-SagarFont border-[2px] rounded-full border-black dark:border-white py-3 px-10 font-semibold text-sm z-10 group-hover:text-white dark:text-white dark:group-hover:text-black transition ease-in-out duration-500 group-hover:cursor-pointer active:scale-[95%]">
                     Download Cv
@@ -251,11 +299,13 @@ export default function Home() {
               <span className="uppercase font-SagarFont font-semibold text-[#29a587]">
                 <TypeAnimation
                   sequence={[
-                    "Web developer",
+                    "Computer Engineer ",
                     1000,
-                    "App developer",
+                    "Web developer ",
                     1000,
-                    "Gym instructor",
+                    "App developer ",
+                    1000,
+                    "Gym instructor ",
                     1000,
                   ]}
                   wrapper="span"
@@ -268,9 +318,10 @@ export default function Home() {
             <div className="flex flex-col justify-center items-center mt-8 w-[90%]">
               <div className="font-SagarFont text-[#655b4b] dark:text-white flex flex-col gap-2 mb-4">
                 <p>
-                  From Gulmi, Nepal. I have rich experience in web developement.
-                  I build web apps from scratch, juggling both frontend and
-                  backend effortlessly.
+                  From Gulmi, Nepal. I have extensive experience in web
+                  development, building web apps from scratch with a strong
+                  grasp of both frontend and backend aspects. However, my
+                  expertise and passion lie primarily in frontend development.
                 </p>
 
                 <p>
@@ -281,91 +332,117 @@ export default function Home() {
               </div>
 
               <div className="flex w-full justify-start gap-5 mt-6 ">
-                <a
-                  href="https://www.facebook.com/sagartandan333"
-                  target="_blank"
-                  rel="noreferrer "
+                <div
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setTimeout(() => {
+                      window.open(
+                        "https://www.facebook.com/sagartandan333",
+                        "_blank"
+                      ); // Open the link in a new tab after 0.3 second
+                    }, 300);
+                  }}
+                  class="group relative hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
                 >
-                  <div class="group relative hover:cursor-pointer">
-                    {darkMode ? (
-                      <img
-                        src={wfb}
-                        alt="Normal Image"
-                        class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
-                      />
-                    ) : (
-                      <img
-                        src={fb}
-                        alt="Normal Image"
-                        class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
-                      />
-                    )}
+                  {darkMode ? (
                     <img
-                      src={fbhover}
+                      src={wfb}
                       alt="Normal Image"
-                      class="w-7 h-6 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
+                      class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
                     />
-                  </div>
-                </a>
-
-                <a
-                  href="https://twitter.com/SagarTanda882"
-                  target="_blank"
-                  rel="noreferrer "
-                >
-                  <div class="group relative hover:cursor-pointer">
-                    {darkMode ? (
-                      <img
-                        src={wtwi}
-                        alt="Normal Image"
-                        class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
-                      />
-                    ) : (
-                      <img
-                        src={twitter}
-                        alt="Normal Image"
-                        class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
-                      />
-                    )}
-
+                  ) : (
                     <img
-                      src={twitterh}
-                      alt="Hover Image"
-                      class="w-7 h-7 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
+                      src={fb}
+                      alt="Normal Image"
+                      class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
                     />
-                  </div>
-                </a>
+                  )}
+                  <img
+                    src={fbhover}
+                    alt="Normal Image"
+                    class="w-7 h-6 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
+                  />
+                </div>
 
-                <a
-                  href="https://www.instagram.com/sagartandan_/"
-                  target="_blank"
-                  rel="noreferrer "
+                <div
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setTimeout(() => {
+                      window.open(
+                        "https://twitter.com/SagarTanda882",
+                        "_blank"
+                      ); // Open the link in a new tab after 0.3 second
+                    }, 300);
+                  }}
+                  class="group relative hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
                 >
-                  <div class="group relative hover:cursor-pointer">
-                    {darkMode ? (
-                      <img
-                        src={winsta}
-                        alt="Normal Image"
-                        class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
-                      />
-                    ) : (
-                      <img
-                        src={insta}
-                        alt="Normal Image"
-                        class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
-                      />
-                    )}
+                  {darkMode ? (
                     <img
-                      src={instah}
-                      alt="Hover Image"
-                      class="w-7 h-7 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
+                      src={wtwi}
+                      alt="Normal Image"
+                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
                     />
-                  </div>
-                </a>
+                  ) : (
+                    <img
+                      src={twitter}
+                      alt="Normal Image"
+                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                    />
+                  )}
+
+                  <img
+                    src={twitterh}
+                    alt="Hover Image"
+                    class="w-7 h-7 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
+                  />
+                </div>
+
+                <div
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setTimeout(() => {
+                      window.open(
+                        "https://www.instagram.com/sagartandan_/",
+                        "_blank"
+                      ); // Open the link in a new tab after 0.3 second
+                    }, 300);
+                  }}
+                  class="group relative hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
+                >
+                  {darkMode ? (
+                    <img
+                      src={winsta}
+                      alt="Normal Image"
+                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                    />
+                  ) : (
+                    <img
+                      src={insta}
+                      alt="Normal Image"
+                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
+                    />
+                  )}
+                  <img
+                    src={instah}
+                    alt="Hover Image"
+                    class="w-7 h-7 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
+                  />
+                </div>
               </div>
 
               <div className="w-full flex justify-start items-center mt-2">
-                <div className="group relative w-full xl:w-[70%] my-5 flex justify-center items-center">
+                <div
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setTimeout(() => {
+                      window.open(
+                        "https://drive.google.com/file/d/19DBaYB7tMkggw9sH3LvPJLb1u6J47rk-/view?usp=sharing",
+                        "_blank"
+                      ); // Open the link in a new tab after 0.3 second
+                    }, 300);
+                  }}
+                  className="group relative w-full xl:w-[70%] my-5 flex justify-center items-center"
+                >
                   <span className="w-full flex justify-center items-center uppercase font-SagarFont border-[2px] rounded-full border-black dark:border-white py-3 px-10 font-semibold text-sm z-10 text-black dark:text-white group-hover:text-white dark:group-hover:text-black transition ease-in-out duration-500 group-hover:cursor-pointer active:scale-[95%]">
                     Download Cv
                   </span>
@@ -394,17 +471,60 @@ export default function Home() {
                   &lt;Developer Mode /&gt;
                 </h1>
               </div>
-              <div className="border-[1px] border-black bg-white w-[200px] h-[70px] rounded-full z-30 absolute bottom-2 right-3 dark:bg-gray-800 dark:border-white transition-all ease-in-out duration-300"></div>
+              <div className="flex flex-col justify-center items-center border-[1px] border-black bg-white w-[200px] h-[70px] rounded-full z-30 absolute bottom-2 right-3 dark:bg-gray-800 dark:border-white transition-all ease-in-out duration-300">
+                <h1
+                  onClick={loadFitness}
+                  className=" text-[#29a587] font-SagarFont font-semibold text-md hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300 hover:text-orange-600"
+                >
+                  &lt;Fitness Mode /&gt;
+                </h1>
+              </div>
             </div>
           </div>
         </div>
       )}
 
-      {display && (
-        <div id="developer">
-          <Developer sendDataToParent={handleDataFromChild} />
-        </div>
-      )}
+      <AnimatePresence>
+        {display && (
+          <motion.div
+            initial={{ opacity: 0, scale: 1 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              zIndex: 50,
+            }}
+          >
+            <Developer sendDataToParent={handleDataFromChild} />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {display1 && (
+          <motion.div
+            initial={{ opacity: 0, scale: 1 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              zIndex: 50,
+            }}
+          >
+            <FitnessMode sendDataToParent={handleDataFromChild1} />
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <div id="skills" className="">
         <Professional />

@@ -5,12 +5,38 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+/* MODIFICATION FOR CUSTOM SCROLLBAR */
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+  width: 5px; /* Set the width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 15px;
+  /* Set the background color of the scrollbar track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #333; /* Set the color of the scrollbar handle */
+  border-radius: 5px; /* Optional: Add border radius to make it rounder */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #666; /* Set the color of the scrollbar handle when hovered */
+}
+
 html {
   scroll-behavior: smooth;
 }
-html{
+html {
   overscroll-behavior: none;
-
 }
 
 @layer base {
@@ -29,16 +55,16 @@ html{
 
 /* for header aanimation */
 @keyframes SlideIn {
-  from{
+  from {
     transform: translateX(100%);
     opacity: 0;
   }
-  to{
+  to {
     transform: translateX(0);
     opacity: 1;
   }
 }
-.animate-slide-in{
+.animate-slide-in {
   animation: SlideIn 0.5s ease-out forwards;
 }
 
@@ -57,17 +83,16 @@ html{
   animation: slideOut 0.5s ease-out forwards;
 }
 
-@keyframes SlideInSkill {
-  from{
-    transform: translateX(-30%);
-    opacity: 0;
+@keyframes scroll {
+  from {
+    transform: translateX(-100%);
   }
-  to{
+
+  to {
     transform: translateX(0);
-    opacity: 1;
   }
 }
 
-.animate-slide-skill {
-  animation: SlideInSkill 0.3s ease-in-out forwards;
+.animate-scroll {
+  animation: scroll 700ms linear forwards;
 }

@@ -27,126 +27,17 @@ export default function Contact() {
 
   const openInMaps = (location) => {
     // Function to open location in Google Maps
-    window.open(
-      `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-        location
-      )}`,
-      "_blank"
-    );
+    setTimeout(() => {
+      window.open(
+        `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+          location
+        )}`,
+        "_blank"
+      );
+    }, 300);
   };
 
-  //   return (
-  //     <div>
-  //       <div className="flex justify-center items-center w-full flex-col px-12 ">
-  //         <div className="flex flex-col justify-center items-center gap-3 w-full max-w-screen-2xl 2xl:mx-auto md:mx-20 mx-10 lg:mx-16 pt-16 ">
-  //           <h2 className="uppercase font-SagarFont font-bold text-3xl tracking-wider mt-5 text-black dark:text-white">
-  //             Contact
-  //           </h2>
-  //           <div className="flex gap-2 justify-center items-center">
-  //             <span className="font-SagarFont font-semibold text-md uppercase text-[#29a587] underline">
-  //               let's
-  //             </span>
-  //             <span className="font-SagarFont font-semibold text-md text-black dark:text-white">
-  //               Talk about ideas
-  //             </span>
-  //           </div>
-
-  //           {/* div for both loc and contactform */}
-  //           <div className="flex flex-col w-full lg:flex-row">
-  //             {/* div to wrap up location */}
-  //             <div className="mt-12 w-full flex flex-col">
-  //               {/* ADDRESS START HERE */}
-  //               <div className="flex gap-20 w-full justify-start items-center">
-  //                 <div className="relative border-[2px] rounded-full w-14 h-14 border-black dark:border-white flex justify-center items-center">
-  //                   {darkMode ? (
-  //                     <img className="w-11 h-11 p-[6px]" src={addressW} alt="" />
-  //                   ) : (
-  //                     <img className="w-11 h-11 p-[6px]" src={address} alt="" />
-  //                   )}
-  //                   <div className="absolute border-[1px] w-full right-[-100%] dark:border-white border-black"></div>
-  //                 </div>
-
-  //                 <div className="flex flex-col mt-4">
-  //                   <h3 className="font-SagarFont font-semibold text-xl text-black dark:text-white tracking-wider">
-  //                     Address
-  //                   </h3>
-  //                   <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] ">
-  //                     Chhatrakot, Gulmi, Nepal
-  //                   </h4>
-  //                 </div>
-  //               </div>
-
-  //               {/* FREELANCE START HERE */}
-
-  //               <div className="flex gap-20 w-full justify-start items-center">
-  //                 <div className="relative border-[2px] rounded-full w-14 h-14 border-black dark:border-white flex justify-center items-center">
-  //                   {darkMode ? (
-  //                     <img className="w-11 h-11 p-[6px]" src={freelaW} alt="" />
-  //                   ) : (
-  //                     <img className="w-11 h-11 p-[6px]" src={freela} alt="" />
-  //                   )}
-  //                   <div className="absolute border-[1px] w-full right-[-100%] dark:border-white border-black"></div>
-  //                 </div>
-
-  //                 <div className="flex flex-col mt-4">
-  //                   <h3 className="font-SagarFont font-semibold text-xl text-black dark:text-white tracking-wider">
-  //                     Freelance
-  //                   </h3>
-  //                   <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] ">
-  //                     Available Right Now
-  //                   </h4>
-  //                 </div>
-  //               </div>
-
-  //               {/* EMAIL START HERE */}
-  //               <div className="flex gap-20 w-full justify-start items-center">
-  //                 <div className="relative border-[2px] rounded-full w-14 h-14 border-black dark:border-white flex justify-center items-center">
-  //                   {darkMode ? (
-  //                     <img className="w-11 h-11 p-[6px]" src={mailW} alt="" />
-  //                   ) : (
-  //                     <img className="w-11 h-11 p-[6px]" src={mail} alt="" />
-  //                   )}
-  //                   <div className="absolute border-[1px] w-full right-[-100%] dark:border-white border-black"></div>
-  //                 </div>
-
-  //                 <div className="flex flex-col mt-4">
-  //                   <h3 className="font-SagarFont font-semibold text-xl text-black dark:text-white tracking-wider">
-  //                     Email
-  //                   </h3>
-  //                   <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] ">
-  //                     sagarchhetry333@gmail.com
-  //                   </h4>
-  //                 </div>
-  //               </div>
-
-  //               {/* PHONE START HERE */}
-  //               <div className="flex gap-20 w-full justify-start items-center">
-  //                 <div className="relative border-[2px] rounded-full w-14 h-14 border-black dark:border-white flex justify-center items-center">
-  //                   {darkMode ? (
-  //                     <img className="w-11 h-11 p-[6px]" src={contactW} alt="" />
-  //                   ) : (
-  //                     <img className="w-11 h-11 p-[6px]" src={contact} alt="" />
-  //                   )}
-  //                   <div className="absolute border-[1px] w-full right-[-100%] dark:border-white border-black"></div>
-  //                 </div>
-
-  //                 <div className="flex flex-col mt-4">
-  //                   <h3 className="font-SagarFont font-semibold text-xl text-black dark:text-white tracking-wider">
-  //                     Phone
-  //                   </h3>
-  //                   <h4 className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] ">
-  //                     +977-9860788076
-  //                   </h4>
-  //                 </div>
-  //               </div>
-  //             </div>
-  //               <ContactForm />
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   );
-  // }
+ 
   return (
     <div>
       <div className="flex justify-center items-center w-full flex-col px-6">
@@ -188,7 +79,7 @@ export default function Contact() {
                       Address
                     </h3>
                     <h4
-                      className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] text-sm lg:text-lg hover:cursor-pointer"
+                      className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] text-sm lg:text-lg hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
                       onClick={() => {
                         openInMaps("chhatrakot,Gulmi,Nepal");
                       }}
@@ -239,7 +130,7 @@ export default function Contact() {
                       Email
                     </h3>
                     <h4
-                      className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] text-sm lg:text-lg  hover:cursor-pointer"
+                      className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] text-sm lg:text-lg  hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
                       onClick={() => {
                         sendEmail("sagarchhetry333@gmail.com");
                       }}
@@ -267,7 +158,7 @@ export default function Contact() {
                       Phone
                     </h3>
                     <h4
-                      className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] text-sm lg:text-lg hover:cursor-pointer"
+                      className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] text-sm lg:text-lg hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
                       onClick={() => {
                         makeCall("+977960788076");
                       }}

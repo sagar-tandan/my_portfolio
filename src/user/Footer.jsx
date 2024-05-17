@@ -16,96 +16,107 @@ export default function () {
 
   return (
     <div className={darkMode ? "dark" : ""}>
-      <div className="flex flex-col justify-center items-center gap-5 mb-16 max-w-screen-2xl 2xl:mx-auto w-full mt-10">
+      <div className="flex flex-col justify-center items-center gap-5 mb-28 max-w-screen-2xl 2xl:mx-auto w-full mt-10">
         <div className="border-solid border-black border-[1px] opacity-10 w-full mb-16 dark:border-white"></div>
 
         <SlideUpComponent>
           <div className="flex w-full justify-center gap-5">
-            <a
-              href="https://www.facebook.com/sagartandan333"
-              target="_blank"
-              rel="noreferrer "
+            <div
+              onClick={(e) => {
+                e.preventDefault();
+                setTimeout(() => {
+                  window.open(
+                    "https://www.facebook.com/sagartandan333",
+                    "_blank"
+                  ); // Open the link in a new tab after 0.3 second
+                }, 300);
+              }}
+              class="group relative hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
             >
-              <div class="group relative hover:cursor-pointer">
-                {darkMode ? (
-                  <img
-                    src={wfb}
-                    alt="Normal Image"
-                    class="w-6 h-5  transition duration-500 ease-in-out group-hover:opacity-0"
-                  />
-                ) : (
-                  <img
-                    src={fb}
-                    alt="Normal Image"
-                    class="w-6 h-5  transition duration-500 ease-in-out group-hover:opacity-0"
-                  />
-                )}
+              {darkMode ? (
                 <img
-                  src={fbhover}
+                  src={wfb}
                   alt="Normal Image"
-                  class="w-6 h-5 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
+                  class="w-6 h-5  transition duration-500 ease-in-out group-hover:opacity-0"
                 />
-              </div>
-            </a>
-
-            <a
-              href="https://twitter.com/SagarTanda882"
-              target="_blank"
-              rel="noreferrer "
-            >
-              <div class="group relative hover:cursor-pointer">
-                {darkMode ? (
-                  <img
-                    src={wtwi}
-                    alt="Normal Image"
-                    class="w-6 h-6 transition duration-500 ease-in-out group-hover:opacity-0"
-                  />
-                ) : (
-                  <img
-                    src={twitter}
-                    alt="Normal Image"
-                    class="w-6 h-6 transition duration-500 ease-in-out group-hover:opacity-0"
-                  />
-                )}
-
+              ) : (
                 <img
-                  src={twitterh}
-                  alt="Hover Image"
-                  class="w-6 h-6 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
+                  src={fb}
+                  alt="Normal Image"
+                  class="w-6 h-5  transition duration-500 ease-in-out group-hover:opacity-0"
                 />
-              </div>
-            </a>
-            <a
-              href="https://www.instagram.com/sagartandan_/"
-              target="_blank"
-              rel="noreferrer "
-            >
-              <div class="group relative hover:cursor-pointer">
-                {darkMode ? (
-                  <img
-                    src={winsta}
-                    alt="Normal Image"
-                    class="w-6 h-6 transition duration-500 ease-in-out group-hover:opacity-0"
-                  />
-                ) : (
-                  <img
-                    src={insta}
-                    alt="Normal Image"
-                    class="w-6 h-6 transition duration-500 ease-in-out group-hover:opacity-0"
-                  />
-                )}
+              )}
+              <img
+                src={fbhover}
+                alt="Normal Image"
+                class="w-6 h-5 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
+              />
+            </div>
 
+            <div
+              onClick={(e) => {
+                e.preventDefault();
+                setTimeout(() => {
+                  window.open("https://twitter.com/SagarTanda882", "_blank"); // Open the link in a new tab after 0.3 second
+                }, 300);
+              }}
+              class="group relative hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
+            >
+              {darkMode ? (
                 <img
-                  src={instah}
-                  alt="Hover Image"
-                  class="w-6 h-6 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
+                  src={wtwi}
+                  alt="Normal Image"
+                  class="w-6 h-6 transition duration-500 ease-in-out group-hover:opacity-0"
                 />
-              </div>
-            </a>
+              ) : (
+                <img
+                  src={twitter}
+                  alt="Normal Image"
+                  class="w-6 h-6 transition duration-500 ease-in-out group-hover:opacity-0"
+                />
+              )}
+
+              <img
+                src={twitterh}
+                alt="Hover Image"
+                class="w-6 h-6 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
+              />
+            </div>
+
+            <div
+              onClick={(e) => {
+                e.preventDefault();
+                setTimeout(() => {
+                  window.open(
+                    "https://www.instagram.com/sagartandan_/",
+                    "_blank"
+                  ); // Open the link in a new tab after 0.3 second
+                }, 300);
+              }}
+              class="group relative hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
+            >
+              {darkMode ? (
+                <img
+                  src={winsta}
+                  alt="Normal Image"
+                  class="w-6 h-6 transition duration-500 ease-in-out group-hover:opacity-0"
+                />
+              ) : (
+                <img
+                  src={insta}
+                  alt="Normal Image"
+                  class="w-6 h-6 transition duration-500 ease-in-out group-hover:opacity-0"
+                />
+              )}
+
+              <img
+                src={instah}
+                alt="Hover Image"
+                class="w-6 h-6 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
+              />
+            </div>
           </div>
-        </SlideUpComponent>
-        <SlideUpComponent>
-          <div className="font-SagarFont uppercase font-semibold text-sm w-full text-black dark:text-white gap-[6px] flex justify-center flex-wrap">
+          <div className="font-SagarFont uppercase font-semibold text-sm w-full text-black dark:text-white gap-[6px] flex justify-center flex-wrap mt-5">
             <div>
               <span>&copy; 2024 </span>
               <span className="text-[#29a587]">Sagar Tandan</span>
