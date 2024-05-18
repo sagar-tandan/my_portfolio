@@ -140,10 +140,10 @@ export default function Home() {
             <div className="flex flex-col justify-center items-center mt-12 w-[80%] md:w-1/2">
               <div className="font-SagarFont text-[#655b4b] dark:text-white flex flex-col gap-2 mb-3">
                 <p>
-                  From Gulmi, Nepal. I have extensive experience in web
-                  development, building web apps from scratch with a strong
-                  grasp of both frontend and backend aspects. However, my
-                  expertise and passion lie primarily in frontend development.
+                  From Gulmi, Nepal. I have good experience in web development,
+                  building web apps from scratch with a strong grasp of both
+                  frontend and backend. However, my expertise and passion lie
+                  primarily in frontend development.
                 </p>
 
                 <p>
@@ -318,10 +318,10 @@ export default function Home() {
             <div className="flex flex-col justify-center items-center mt-8 w-[90%]">
               <div className="font-SagarFont text-[#655b4b] dark:text-white flex flex-col gap-2 mb-4">
                 <p>
-                  From Gulmi, Nepal. I have extensive experience in web
-                  development, building web apps from scratch with a strong
-                  grasp of both frontend and backend aspects. However, my
-                  expertise and passion lie primarily in frontend development.
+                  From Gulmi, Nepal. I have good experience in web development,
+                  building web apps from scratch with a strong grasp of both
+                  frontend and backend. However, my expertise and passion lie
+                  primarily in frontend development.
                 </p>
 
                 <p>
