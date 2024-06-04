@@ -28,20 +28,17 @@ export default function Contact() {
   const openInMaps = (location) => {
     // Function to open location in Google Maps
     setTimeout(() => {
-      window.open(
-        `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-          location
-        )}`,
-        "_blank"
-      );
-    }, 300);
+      const newWindow = window.open("location", "_blank"); // Open a blank new tab/window
+      newWindow.location.href = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+        location
+      )}`; // Navigate to the desired URL after the delay
+    }, 100);
   };
 
- 
   return (
     <div>
       <div className="flex justify-center items-center w-full flex-col px-6">
-        <div className="flex flex-col justify-center items-center gap-3 w-full max-w-screen-2xl 2xl:mx-auto md:mx-20 mx-10 lg:mx-16 pt-16">
+        <div className="flex flex-col justify-center items-center gap-3 w-full max-w-screen-2xl 2xl:mx-auto md:mx-20 mx-10 lg:mx-5 pt-16">
           <SlideUpComponent>
             <h2 className="uppercase font-SagarFont font-bold text-lg lg:text-3xl tracking-wider mt-5 text-black dark:text-white">
               Contact me
@@ -59,9 +56,9 @@ export default function Contact() {
           </SlideUpComponent>
 
           {/* div for both loc and contactform */}
-          <div className="flex flex-col w-full md:flex-row">
+          <div className="flex flex-col w-full md:flex-row ">
             {/* div to wrap up location */}
-            <div className="mt-12 w-full flex flex-col lg:ml-16 md:w-[60%] lg:w-[80%] lg:gap-12 gap-8">
+            <div className="mt-12 w-[95%] flex flex-col md:w-[60%] lg:w-[80%] lg:gap-12 gap-8 mx-auto">
               {/* ADDRESS START HERE */}
               <SlideLeftComponent>
                 <div className="flex gap-6 lg:gap-20 w-full justify-start items-center ">
@@ -79,7 +76,7 @@ export default function Contact() {
                       Address
                     </h3>
                     <h4
-                      className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] text-sm lg:text-lg hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
+                      className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] text-sm lg:text-lg hover:cursor-pointer hover:underline active:scale-95 transition-all ease-in-out duration-300"
                       onClick={() => {
                         openInMaps("chhatrakot,Gulmi,Nepal");
                       }}
@@ -130,7 +127,7 @@ export default function Contact() {
                       Email
                     </h3>
                     <h4
-                      className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] text-sm lg:text-lg  hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
+                      className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] text-sm lg:text-lg  hover:cursor-pointer hover:underline active:scale-95 transition-all ease-in-out duration-300"
                       onClick={() => {
                         sendEmail("sagarchhetry333@gmail.com");
                       }}
@@ -158,7 +155,7 @@ export default function Contact() {
                       Phone
                     </h3>
                     <h4
-                      className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] text-sm lg:text-lg hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
+                      className="font-SagarFont font-light dark:text-[#a4a6a9] text-[#79808b] text-sm lg:text-lg hover:cursor-pointer hover:underline active:scale-95 transition-all ease-in-out duration-300"
                       onClick={() => {
                         makeCall("+977960788076");
                       }}

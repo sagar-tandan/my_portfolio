@@ -72,7 +72,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="flex flex-col w-full my-12 lg:mr-16 ">
+    <div className="flex flex-col w-[95%] my-12 lg:mr-16 mx-auto">
       <form onSubmit={handleSubmit} action="">
         <div className="flex gap-8 my-3 flex-col md:flex-row">
           <div className="flex flex-col gap-2 w-full ">

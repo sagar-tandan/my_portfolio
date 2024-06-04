@@ -14,6 +14,12 @@ import { ThemeContext } from "../components/ThemeProvider.jsx";
 export default function () {
   const { darkMode, setDarkMode } = useContext(ThemeContext);
 
+  const handleLink = (link, title) => {
+    // console.log(link);
+    const newWindow = window.open(title, "_blank"); // Open a blank new tab/window
+    newWindow.location.href = link; // Navigate to the desired URL after the delay
+  };
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <div className="flex flex-col justify-center items-center gap-5 mb-28 max-w-screen-2xl 2xl:mx-auto w-full mt-10">
@@ -25,10 +31,10 @@ export default function () {
               onClick={(e) => {
                 e.preventDefault();
                 setTimeout(() => {
-                  window.open(
+                  handleLink(
                     "https://www.facebook.com/sagartandan333",
-                    "_blank"
-                  ); // Open the link in a new tab after 0.3 second
+                    "Sagar Tandan"
+                  );
                 }, 300);
               }}
               class="group relative hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
@@ -57,7 +63,10 @@ export default function () {
               onClick={(e) => {
                 e.preventDefault();
                 setTimeout(() => {
-                  window.open("https://twitter.com/SagarTanda882", "_blank"); // Open the link in a new tab after 0.3 second
+                  handleLink(
+                    "https://twitter.com/SagarTanda882",
+                    "Sagar Tandan"
+                  );
                 }, 300);
               }}
               class="group relative hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
@@ -87,10 +96,10 @@ export default function () {
               onClick={(e) => {
                 e.preventDefault();
                 setTimeout(() => {
-                  window.open(
+                  handleLink(
                     "https://www.instagram.com/sagartandan_/",
-                    "_blank"
-                  ); // Open the link in a new tab after 0.3 second
+                    "Sagar Tandan"
+                  );
                 }, 300);
               }}
               class="group relative hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"

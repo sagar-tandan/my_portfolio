@@ -10,9 +10,15 @@ export default function Projects() {
     setData(ProjectData);
   }, []);
 
+  const handleLink = (link,title) => {
+    // console.log(link);
+    const newWindow = window.open(title, "_blank"); // Open a blank new tab/window
+    newWindow.location.href = link; // Navigate to the desired URL after the delay
+  };
+
   return (
     <div className="flex flex-col">
-      <div className="flex flex-col justify-center items-center gap-3 max-w-screen-2xl 2xl:mx-auto mx-3 lg:mx-16 pt-16">
+      <div className="flex flex-col justify-center items-center gap-3 max-w-screen-2xl 2xl:mx-auto mx-3 lg:mx-5 pt-16">
         <SlideUpComponent>
           <h1 className="uppercase font-SagarFont font-bold text-lg lg:text-3xl tracking-wider mt-5 text-black dark:text-white">
             PORTFOLIO
@@ -30,11 +36,11 @@ export default function Projects() {
         </SlideUpComponent>
 
         <SlideUpComponent>
-          <div className="flex flex-col sm:flex-row flex-wrap">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 w-full">
             {data.map((each) => (
               <div
                 key={each.id}
-                className="flex flex-col rounded-3xl w-full sm:w-[90%] md:w-[45%] xl:w-[30%] justify-start items-center my-5 mx-auto bg-white dark:bg-[#1d222a] p-6 gap-3 group "
+                className="flex flex-col rounded-3xl w-[90%] md:w-[45%] xl:w-[32%] justify-start items-center my-5 mx-auto bg-white dark:bg-[#1d222a] p-6 gap-3 group "
               >
                 <SlideUpComponent>
                   <div className="w-full h-[220px] flex justify-center items-center rounded-2xl overflow-hidden">
@@ -60,8 +66,8 @@ export default function Projects() {
                         onClick={(e) => {
                           e.preventDefault();
                           setTimeout(() => {
-                            window.open(each.link, "_blank"); // Open the link in a new tab after 0.3 second
-                          }, 300);
+                            handleLink(each.link,each.title);
+                          }, 100);
                         }}
                         className=" font-semibold text-black text-sm sm:text-md dark:text-white flex mt-2 justify-start items-center gap-3 hover:cursor-pointer group hover:underline active:scale-95 transition-all ease-in-out duration-300"
                       >
@@ -74,11 +80,11 @@ export default function Projects() {
                       </div>
                       {each.github ? (
                         <div
-                          onClick={(e) => {
-                            e.preventDefault();
-                            setTimeout(() => {
-                              window.open(each.github, "_blank"); // Open the link in a new tab after 0.3 second
-                            }, 300);
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setTimeout(() => {
+                            handleLink(each.github,each.title);
+                          }, 100);
                           }}
                           className=" font-semibold text-black text-sm sm:text-md dark:text-white flex mt-2 justify-start items-center gap-3 hover:cursor-pointer group hover:underline active:scale-95 transition-all ease-in-out duration-300"
                         >

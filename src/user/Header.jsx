@@ -11,9 +11,11 @@ export default function () {
 
   return (
     <div className={darkMode ? "dark" : ""}>
-      <div className="relative z-40 w-full pb-36 max-w-screen-2xl 3xl:mx-auto">
+
+     
+      <div className="relative z-40 w-full pb-36 3xl:mx-auto">
         <div className="flex justify-between px-2 fixed w-full shadow-md bg-[#ebe6df] dark:bg-gray-900 sm:shadow-transparent sm:bg-transparent dark:sm:bg-transparent flex-wrap">
-          <div className="relative flex gap-1 justify-start items-center p-5 ">
+          <div className="relative flex gap-1 justify-start items-center p-5">
             <h2 className=" text-black uppercase font-SagarFont font-bold text-3xl dark:text-white ">
               sagar
             </h2>

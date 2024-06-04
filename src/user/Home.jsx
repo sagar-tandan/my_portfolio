@@ -63,11 +63,17 @@ export default function Home() {
     }, 300);
   };
 
+  const handleLink = (link, title) => {
+    // console.log(link);
+    const newWindow = window.open(title, "_blank"); // Open a blank new tab/window
+    newWindow.location.href = link; // Navigate to the desired URL after the delay
+  };
+
   return (
     <div className={darkMode ? "dark" : ""}>
       {isSmallScreen && (
         <div
-          className={`flex flex-col justify-center items-center max-w-screen-lg pt-6`}
+          className={`flex flex-col justify-center items-center w-full max-w-screen-lg pt-6`}
         >
           {/* beginning of intro */}
           <div className="w-full justify-center items-center flex gap-2 mx-auto">
@@ -94,8 +100,6 @@ export default function Home() {
                   "Web developer ",
                   1000,
                   "App developer ",
-                  1000,
-                  "Gym instructor ",
                   1000,
                 ]}
                 wrapper="span"
@@ -137,7 +141,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-col justify-center items-center mt-12 w-[80%] md:w-1/2">
+            <div className="flex flex-col justify-center items-center mt-12 w-[95%]">
               <div className="font-SagarFont text-[#655b4b] dark:text-white flex flex-col gap-2 mb-3">
                 <p>
                   From Gulmi, Nepal. I have good experience in web development,
@@ -158,10 +162,10 @@ export default function Home() {
                   onClick={(e) => {
                     e.preventDefault();
                     setTimeout(() => {
-                      window.open(
+                      handleLink(
                         "https://www.facebook.com/sagartandan333",
-                        "_blank"
-                      ); // Open the link in a new tab after 0.3 second
+                        "Sagar Tandan"
+                      );
                     }, 300);
                   }}
                   class="group relative hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
@@ -191,10 +195,10 @@ export default function Home() {
                   onClick={(e) => {
                     e.preventDefault();
                     setTimeout(() => {
-                      window.open(
+                      handleLink(
                         "https://twitter.com/SagarTanda882",
-                        "_blank"
-                      ); // Open the link in a new tab after 0.3 second
+                        "Sagar Tandan"
+                      );
                     }, 300);
                   }}
                   class="group relative hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
@@ -223,10 +227,10 @@ export default function Home() {
                   onClick={(e) => {
                     e.preventDefault();
                     setTimeout(() => {
-                      window.open(
+                      handleLink(
                         "https://www.instagram.com/sagartandan_/",
-                        "_blank"
-                      ); // Open the link in a new tab after 0.3 second
+                        "Sagar Tandan"
+                      );
                     }, 300);
                   }}
                   class="group relative hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
@@ -256,11 +260,11 @@ export default function Home() {
                 onClick={(e) => {
                   e.preventDefault();
                   setTimeout(() => {
-                    window.open(
+                    handleLink(
                       "https://drive.google.com/file/d/19DBaYB7tMkggw9sH3LvPJLb1u6J47rk-/view?usp=sharing",
-                      "_blank"
-                    ); // Open the link in a new tab after 0.3 second
-                  }, 300);
+                      "Sagar Tandan"
+                    );
+                  }, 100);
                 }}
                 className="w-full flex justify-center items-center mt-2"
               >
@@ -336,10 +340,10 @@ export default function Home() {
                   onClick={(e) => {
                     e.preventDefault();
                     setTimeout(() => {
-                      window.open(
+                      handleLink(
                         "https://www.facebook.com/sagartandan333",
-                        "_blank"
-                      ); // Open the link in a new tab after 0.3 second
+                        "Sagar Tandan"
+                      );
                     }, 300);
                   }}
                   class="group relative hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
@@ -368,10 +372,10 @@ export default function Home() {
                   onClick={(e) => {
                     e.preventDefault();
                     setTimeout(() => {
-                      window.open(
+                      handleLink(
                         "https://twitter.com/SagarTanda882",
-                        "_blank"
-                      ); // Open the link in a new tab after 0.3 second
+                        "Sagar Tandan"
+                      );
                     }, 300);
                   }}
                   class="group relative hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
@@ -401,10 +405,10 @@ export default function Home() {
                   onClick={(e) => {
                     e.preventDefault();
                     setTimeout(() => {
-                      window.open(
+                      handleLink(
                         "https://www.instagram.com/sagartandan_/",
-                        "_blank"
-                      ); // Open the link in a new tab after 0.3 second
+                        "Sagar Tandan"
+                      );
                     }, 300);
                   }}
                   class="group relative hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
@@ -435,11 +439,11 @@ export default function Home() {
                   onClick={(e) => {
                     e.preventDefault();
                     setTimeout(() => {
-                      window.open(
+                      handleLink(
                         "https://drive.google.com/file/d/19DBaYB7tMkggw9sH3LvPJLb1u6J47rk-/view?usp=sharing",
-                        "_blank"
-                      ); // Open the link in a new tab after 0.3 second
-                    }, 300);
+                        "Sagar Tandan"
+                      );
+                    }, 100);
                   }}
                   className="group relative w-full xl:w-[70%] my-5 flex justify-center items-center"
                 >
@@ -526,15 +530,15 @@ export default function Home() {
         )}
       </AnimatePresence>
 
-      <div id="skills" className="">
+      <div id="skills" className="max-w-screen-xl mx-auto">
         <Professional />
       </div>
 
-      <div id="projects" className="">
+      <div id="projects" className="max-w-screen-xl mx-auto">
         <Projects />
       </div>
 
-      <div id="contact" className="">
+      <div id="contact" className="max-w-screen-xl mx-auto">
         <Contact />
       </div>
     </div>
