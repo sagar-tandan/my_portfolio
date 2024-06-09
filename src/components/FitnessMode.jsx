@@ -534,23 +534,17 @@ const FitnessMode = ({ sendDataToParent }) => {
               <div className="flex flex-row gap-2 justify-start items-center">
                 <img className="w-7 h-7 p-[2px]" src={insta} alt="" />
 
-                <h2
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setTimeout(() => {
-                      window.open(
-                        "https://www.instagram.com/sagartandan_/",
-                        "_blank"
-                      ); // Open the link in a new tab after 0.3 second
-                    }, 300);
-                  }}
-                  className="text-sm sm:text-lg hover:underline font-SagarFont font-light sm:font-medium text-white hover:cursor-pointer active:scale-95 transition-all duration-300 ease-in-out"
+                <a
+                  href="https://www.instagram.com/sagartandan_/"
+                  target="_blank"
                 >
-                  Sagartandan_
-                </h2>
+                  <h2 className="text-sm sm:text-lg hover:underline font-SagarFont font-light sm:font-medium text-white hover:cursor-pointer active:scale-95 transition-all duration-300 ease-in-out">
+                    Sagartandan_
+                  </h2>
+                </a>
               </div>
 
-              <div className="flex flex-row gap-2 justify-start items-center">
+              {/* <div className="flex flex-row gap-2 justify-start items-center">
                 <img className="w-7 h-7 p-1" src={twitter} alt="" />
                 <h2
                   onClick={(e) => {
@@ -566,7 +560,7 @@ const FitnessMode = ({ sendDataToParent }) => {
                 >
                   SagarTanda882
                 </h2>
-              </div>
+              </div> */}
 
               <div className="flex flex-row gap-2 justify-start items-center">
                 <img className="w-7 h-7 p-1" src={gmail} alt="" />

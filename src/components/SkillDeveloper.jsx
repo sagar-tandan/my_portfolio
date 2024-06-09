@@ -5,6 +5,34 @@ const SkillDeveloper = () => {
     <div>
       <div className="relative text-white w-full flex flex-col gap-2 px-4 sm:px-8 mt-5">
         <div className="flex flex-row justify-between items-center w-full">
+          <h1 className="font-SagarFont font-medium">HTML</h1>
+          <h1 className="font-SagarFont font-medium">90%</h1>
+        </div>
+
+        <div className="flex justify-center items-center">
+          <div className="w-full h-3 bg-gray-200 overflow-x-auto relative rounded-lg shadow-lg">
+            {/* animate-scroll is defined in index.css */}
+            <div className="absolute inset-0 w-[90%] bg-gradient-to-r  from-[#ff7816] to-[#ff4b00] animate-scroll rounded-lg"></div>
+          </div>
+        </div>
+      </div>
+
+      <div className="relative text-white w-full flex flex-col gap-2 px-4 sm:px-8 mt-5">
+        <div className="flex flex-row justify-between items-center w-full">
+          <h1 className="font-SagarFont font-medium">CSS</h1>
+          <h1 className="font-SagarFont font-medium">70%</h1>
+        </div>
+
+        <div className="flex justify-center items-center">
+          <div className="w-full h-3 bg-gray-200 overflow-x-auto relative rounded-lg shadow-lg">
+            {/* animate-scroll is defined in index.css */}
+            <div className="absolute inset-0 w-[70%] bg-gradient-to-r  from-[#1572b6] to-[#35a8db] animate-scroll rounded-lg"></div>
+          </div>
+        </div>
+      </div>
+
+      <div className="relative text-white w-full flex flex-col gap-2 px-4 sm:px-8 mt-5">
+        <div className="flex flex-row justify-between items-center w-full">
           <h1 className="font-SagarFont font-medium">Python</h1>
           <h1 className="font-SagarFont font-medium">60%</h1>
         </div>
@@ -58,8 +86,8 @@ const SkillDeveloper = () => {
 
       <div className="relative text-white w-full flex flex-col gap-2 px-4 sm:px-8 mt-5">
         <div className="flex flex-row justify-between items-center w-full">
-          <h1 className="font-SagarFont font-medium">Javascript</h1>
-          <h1 className="font-SagarFont font-medium">60%</h1>
+          <h1 className="font-SagarFont font-medium">JavaScript</h1>
+          <h1 className="font-SagarFont font-medium">70%</h1>
         </div>
         <div className="flex justify-center items-center">
           <div className="w-full h-3 bg-gray-200 overflow-x-auto relative rounded-lg shadow-lg">
@@ -71,13 +99,13 @@ const SkillDeveloper = () => {
 
       <div className="relative text-white w-full flex flex-col gap-2 px-4 sm:px-8 mt-5">
         <div className="flex flex-row justify-between items-center w-full">
-          <h1 className="font-SagarFont font-medium">Fitness</h1>
-          <h1 className="font-SagarFont font-medium">80%</h1>
+          <h1 className="font-SagarFont font-medium">Firebase</h1>
+          <h1 className="font-SagarFont font-medium">70%</h1>
         </div>
         <div className="flex justify-center items-center">
           <div className="w-full h-3 bg-gray-200 overflow-x-auto relative rounded-lg shadow-lg">
             {/* animate-scroll is defined in index.css */}
-            <div className="absolute inset-0 w-[80%] bg-gradient-to-r  from-[#ddaf7e] to-[#6ab3d7] animate-scroll rounded-lg"></div>
+            <div className="absolute inset-0 w-[70%] bg-gradient-to-r  from-[#ddaf7e] to-[#6ab3d7] animate-scroll rounded-lg"></div>
           </div>
         </div>
       </div>

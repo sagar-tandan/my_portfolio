@@ -7,6 +7,8 @@ import github from "../assets/Icons/github.png";
 import gmail from "../assets/Icons/gmaildev.png";
 import twitter from "../assets/twitterh.png";
 import insta from "../assets/instah.png";
+import linked from "../assets/Glinkedin.png";
+
 import appleExit from "../assets/appleExit.png";
 import SkillDeveloper from "./SkillDeveloper";
 const Developer = ({ sendDataToParent }) => {
@@ -262,13 +264,14 @@ const Developer = ({ sendDataToParent }) => {
                     </div>
                     <div className=" font-SagarFont font-light sm:font-medium text-sm sm:text-lg w-full mt-3 flex-col">
                       <a
-                        // href={items.link}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          setTimeout(() => {
-                            window.open(items.link, "_blank"); // Open the link in a new tab after 0.3 second
-                          }, 300);
-                        }}
+                        href={items.link}
+                        // onClick={(e) => {
+                        //   e.preventDefault();
+                        //   setTimeout(() => {
+                        //     window.open(items.link, "_blank"); // Open the link in a new tab after 0.3 second
+                        //   }, 300);
+                        // }}
+                        target="_blank"
                       >
                         <h1 className="text-white w-full hover:cursor-pointer hover:underline active:scale-95 transition-all  ease-in-out duration-500">
                           {items.title}
@@ -307,54 +310,36 @@ const Developer = ({ sendDataToParent }) => {
               <div className="flex flex-row gap-2 justify-start items-center">
                 <img className="w-7 h-7 p-1" src={github} alt="" />
 
-                <h2
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setTimeout(() => {
-                      window.open("https://github.com/sagar-tandan", "_blank"); // Open the link in a new tab after 0.3 second
-                    }, 300);
-                  }}
-                  className="text-sm sm:text-lg font-light font-SagarFont sm:font-medium text-[#2da689] hover:cursor-pointer hover:underline active:scale-95 transition-all duration-300 ease-in-out"
-                >
-                  sagar-tandan
-                </h2>
+                <a href="https://github.com/sagar-tandan" target="_blank">
+                  <h2 className="text-sm sm:text-lg font-light font-SagarFont sm:font-medium text-[#2da689] hover:cursor-pointer hover:underline active:scale-95 transition-all duration-300 ease-in-out">
+                    sagar-tandan
+                  </h2>
+                </a>
               </div>
 
               <div className="flex flex-row gap-2 justify-start items-center">
                 <img className="w-7 h-7 p-[2px]" src={insta} alt="" />
 
-                <h2
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setTimeout(() => {
-                      window.open(
-                        "https://www.instagram.com/sagartandan_/",
-                        "_blank"
-                      ); // Open the link in a new tab after 0.3 second
-                    }, 300);
-                  }}
-                  className="text-sm sm:text-lg font-light font-SagarFont sm:font-medium hover:underline text-[#2da689] hover:cursor-pointer active:scale-95 transition-all duration-300 ease-in-out"
+                <a
+                  href="https://www.instagram.com/sagartandan_/"
+                  target="_blank"
                 >
-                  Sagartandan_
-                </h2>
+                  <h2 className="text-sm sm:text-lg font-light font-SagarFont sm:font-medium hover:underline text-[#2da689] hover:cursor-pointer active:scale-95 transition-all duration-300 ease-in-out">
+                    Sagartandan_
+                  </h2>
+                </a>
               </div>
 
               <div className="flex flex-row gap-2 justify-start items-center">
-                <img className="w-7 h-7 p-1" src={twitter} alt="" />
-                <h2
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setTimeout(() => {
-                      window.open(
-                        "https://twitter.com/SagarTanda882",
-                        "_blank"
-                      ); // Open the link in a new tab after 0.3 second
-                    }, 300);
-                  }}
-                  className="text-sm sm:text-lg font-light font-SagarFont sm:font-medium hover:underline text-[#2da689] hover:cursor-pointer active:scale-95 transition-all duration-300 ease-in-out"
+                <img className="w-7 h-7 p-1" src={linked} alt="" />
+                <a
+                  href="https://www.linkedin.com/in/sagar-tandan-a1b3b2298/"
+                  target="_blank"
                 >
-                  SagarTanda882
-                </h2>
+                  <h2 className="text-sm sm:text-lg font-light font-SagarFont sm:font-medium hover:underline text-[#2da689] hover:cursor-pointer active:scale-95 transition-all duration-300 ease-in-out">
+                    Sagar Tandan
+                  </h2>
+                </a>
               </div>
 
               <div className="flex flex-row gap-2 justify-start items-center">
@@ -431,7 +416,6 @@ const Developer = ({ sendDataToParent }) => {
         break;
 
       case "clear":
-        
         setOutputs([]);
         break;
 

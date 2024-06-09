@@ -8,6 +8,14 @@ import wfb from "../assets/fbwhite.png";
 import twitterh from "../assets/twitterh.png";
 import winsta from "../assets/instawhite.png";
 import wtwi from "../assets/twitterwhite.png";
+
+import git from "../assets/github.png";
+import wgit from "../assets/wgithub.png";
+import ggit from "../assets/Ggithub.png";
+import linked from "../assets/linkedin.png";
+import glinked from "../assets/Glinkedin.png";
+import wlinked from "../assets/wlinkedin.png";
+
 import SlideUpComponent from "../components/SlideUpComponent.jsx";
 import { ThemeContext } from "../components/ThemeProvider.jsx";
 
@@ -27,6 +35,74 @@ export default function () {
 
         <SlideUpComponent>
           <div className="flex w-full justify-center gap-5">
+
+          <div
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setTimeout(() => {
+                      handleLink(
+                        "https://github.com/sagar-tandan/",
+                        "Sagar Tandan"
+                      );
+                    }, 300);
+                  }}
+                  class="group relative hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
+                >
+                  {darkMode ? (
+                    <img
+                      src={wgit}
+                      alt="Normal Image"
+                      class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
+                    />
+                  ) : (
+                    <img
+                      src={git}
+                      alt="Normal Image"
+                      class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
+                    />
+                  )}
+
+                  <img
+                    src={ggit}
+                    alt="Hover Image"
+                    class="w-7 h-6  absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
+                  />
+                </div>
+
+                <div
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setTimeout(() => {
+                      handleLink(
+                        "https://www.linkedin.com/in/sagar-tandan-a1b3b2298/",
+                        "Sagar Tandan"
+                      );
+                    }, 300);
+                  }}
+                  class="group relative hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
+                >
+                  {darkMode ? (
+                    <img
+                      src={wlinked}
+                      alt="Normal Image"
+                      class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
+                    />
+                  ) : (
+                    <img
+                      src={linked}
+                      alt="Normal Image"
+                      class="w-7 h-6  transition duration-500 ease-in-out group-hover:opacity-0"
+                    />
+                  )}
+
+                  <img
+                    src={glinked}
+                    alt="Hover Image"
+                    class="w-7 h-6  absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
+                  />
+                </div>
+
+
             <div
               onClick={(e) => {
                 e.preventDefault();
@@ -59,7 +135,7 @@ export default function () {
               />
             </div>
 
-            <div
+            {/* <div
               onClick={(e) => {
                 e.preventDefault();
                 setTimeout(() => {
@@ -90,7 +166,7 @@ export default function () {
                 alt="Hover Image"
                 class="w-6 h-6 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
               />
-            </div>
+            </div> */}
 
             <div
               onClick={(e) => {
