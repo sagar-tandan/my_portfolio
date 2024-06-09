@@ -9,6 +9,7 @@ import wfb from "../assets/fbwhite.png";
 import twitterh from "../assets/twitterh.png";
 import winsta from "../assets/instawhite.png";
 import wtwi from "../assets/twitterwhite.png";
+import sagarCv from "../assets/Sagar_Tandan_Resume.pdf";
 import Professional from "./Professional";
 import Contact from "./Contact.jsx";
 import Projects from "./Projects.jsx";
@@ -136,7 +137,7 @@ export default function Home() {
                   onClick={loadFitness}
                   className="text-[#29a587] font-SagarFont font-semibold text-sm hover:cursor-pointer hover:text-orange-600 active:scale-95 transition-all ease-in-out duration-300"
                 >
-                  &lt;Fitness Mode /&gt;
+                  &lt;Fit Mode /&gt;
                 </h1>
               </div>
             </div>
@@ -261,7 +262,7 @@ export default function Home() {
                   e.preventDefault();
                   setTimeout(() => {
                     handleLink(
-                      "https://drive.google.com/file/d/19DBaYB7tMkggw9sH3LvPJLb1u6J47rk-/view?usp=sharing",
+                      "https://drive.google.com/file/d/1N5rc6yoeJfJ5lsLXock49nVuhK27oRQG/view?usp=sharing",
                       "Sagar Tandan"
                     );
                   }, 100);
@@ -440,7 +441,7 @@ export default function Home() {
                     e.preventDefault();
                     setTimeout(() => {
                       handleLink(
-                        "https://drive.google.com/file/d/19DBaYB7tMkggw9sH3LvPJLb1u6J47rk-/view?usp=sharing",
+                        "https://drive.google.com/file/d/1N5rc6yoeJfJ5lsLXock49nVuhK27oRQG/view?usp=sharing",
                         "Sagar Tandan"
                       );
                     }, 100);
@@ -480,7 +481,7 @@ export default function Home() {
                   onClick={loadFitness}
                   className=" text-[#29a587] font-SagarFont font-semibold text-md hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300 hover:text-orange-600"
                 >
-                  &lt;Fitness Mode /&gt;
+                  &lt;Fit Mode /&gt;
                 </h1>
               </div>
             </div>
