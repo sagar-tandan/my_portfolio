@@ -31,6 +31,18 @@ const projects = [
     link: "https://veshrajpangeni.com.np/",
     github: "https://github.com/sagar-tandan/vesh_portfolio",
   },
+
+  {
+    id: 8,
+    title: "Job Board",
+    desc: "Job board is a platform that allows employers to post jobs; seekers to search and apply. Features: job listings, detail pages, dashboards, resume uploads, search, and email notifications.",
+    category: "Web Development",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/projecttry-ebf57.appspot.com/o/Images%2FJOBB.png?alt=media&token=ba313c39-2d59-48a2-b7b4-85c85815e718",
+    link: "https://github.com/sagar-tandan/codSoft_JobBoard_backend",
+    github: "https://github.com/sagar-tandan/codSoft_JobBoard_frontend",
+  },
+
   {
     id: 2,
     title: "Project K",
@@ -44,7 +56,7 @@ const projects = [
   {
     id: 3,
     title: "Life Hacks Ultimate",
-    desc: "Life Hacks Ultimate is an android application developed using Java. It Consists of bunches of the categories. Each categories contains bunches of life saving tips with really good User Inteface.",
+    desc: "Life Hacks Ultimate is an android application developed using Java. It Consists of bunches of the categories. Each categories contains bunches of life saving tips with really good UI.",
     category: "App Development",
     image:
       "https://firebasestorage.googleapis.com/v0/b/images-bf03f.appspot.com/o/Uploads%2FExperience%20(2).png?alt=media&token=1efca77f-1f36-406d-9101-61b3de494af9",
