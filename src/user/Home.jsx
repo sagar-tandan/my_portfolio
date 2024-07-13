@@ -382,8 +382,6 @@ export default function Home() {
                     1000,
                     "App developer ",
                     1000,
-                    "Gym instructor ",
-                    1000,
                   ]}
                   wrapper="span"
                   speed={50}
@@ -409,9 +407,7 @@ export default function Home() {
               </div>
 
               <div className="flex w-full justify-start gap-5 mt-6 ">
-
-
-              <div
+                <div
                   onClick={(e) => {
                     e.preventDefault();
                     setTimeout(() => {
@@ -443,7 +439,6 @@ export default function Home() {
                     class="w-7 h-6  absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
                   />
                 </div>
-
 
                 <div
                   onClick={(e) => {
@@ -477,7 +472,6 @@ export default function Home() {
                     class="w-7 h-6  absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
                   />
                 </div>
-
 
                 <div
                   onClick={(e) => {
