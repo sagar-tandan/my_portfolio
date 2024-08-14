@@ -73,7 +73,7 @@ export default function Professional() {
         {width < 400 && (
           <div className="w-[90%] my-5">
             <SlideUpComponent>
-              <div className="w-full p-8 flex flex-col gap-10 shadow-[#a6a097] dark:shadow-[#222f4d] shadow-sm  ">
+              <div className="w-full p-8 flex flex-col gap-10">
                 <div className="flex justify-between font-SagarFont font-semibold text-black dark:text-white">
                   <SlideUpComponent>
                     <div className="flex flex-col gap-2 justify-center items-center">
@@ -173,7 +173,7 @@ export default function Professional() {
         {width >= 400 && width <= 800 && (
           <div className="w-[90%] my-5">
             <SlideUpComponent>
-              <div className="w-full shadow-[#a6a097] dark:shadow-[#222f4d] shadow-sm p-8 flex flex-col gap-10">
+              <div className="w-full p-8 flex flex-col gap-10">
                 <div className="flex justify-between font-SagarFont font-semibold text-black dark:text-white">
                   <SlideUpComponent>
                     <div className="flex flex-col gap-2 justify-center items-center">
@@ -267,7 +267,7 @@ export default function Professional() {
         {width > 800 && (
           <div className="w-[90%] lg:w-[100%] my-5 ">
             <SlideUpComponent>
-              <div className="w-full shadow-[#a6a097] dark:shadow-[#222f4d] shadow-sm px-8 py-10 flex flex-col gap-10">
+              <div className="w-full  px-8 py-10 flex flex-col gap-10">
                 <div className="flex justify-between font-SagarFont font-semibold text-black dark:text-white">
                   <SlideUpComponent>
                     <div className="flex flex-col gap-2 justify-center items-center">
