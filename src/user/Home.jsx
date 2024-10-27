@@ -130,21 +130,38 @@ export default function Home() {
                   class="w-[370px] h-[370px] z-20 md:w-[500px] md:h-[590px] object-cover object-center rounded-full absolute top-[43%] left-[55%] md:top-[45%] md:left-[54%] transform -translate-x-1/2 -translate-y-1/2"
                 ></img>
               </div>
-              <div className="border-[1px] border-black bg-white w-[160px] h-[55px] md:w-[200px] md:h-[70px] rounded-full z-30 absolute bottom-13 left-[-10px] md:left-[-30px] dark:bg-gray-800 dark:border-white flex justify-center items-center">
-                <h1
-                  onClick={loadDeveloper}
-                  className="text-[#29a587] font-SagarFont font-semibold text-sm hover:cursor-pointer hover:text-orange-600 active:scale-95 transition-all ease-in-out duration-300"
-                >
-                  &lt;Developer Mode /&gt;
-                </h1>
+
+              <div className="flex flex-col rounded-full absolute bottom-13 -left-[30px] md:left-[-30px] transition-all ease-in-out duration-300 justify-center items-center z-40 hover:scale-105 active:scale-100">
+                <div className="relative w-full">
+                  <div className="absolute inset-0 bg-[#2fc29e] opacity-20 rounded-full animate-pulse" />
+                  <div
+                    className="w-full rounded-full bg-[#2fc29e/90] h-full p-1 flex cursor-pointer"
+                    onClick={loadDeveloper}
+                  >
+                    <div className="w-full h-full bg-gradient-to-r from-[#29a587] to-[#2fc29e] rounded-full opacity-90 flex justify-center items-center">
+                      <h1 className="text-white font-SagarFont font-semibold py-3 text-md transition-all ease-in-out duration-300 px-3">
+                        &lt;Developer Mode /&gt;
+                      </h1>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="border-[1px] border-black bg-white w-[160px] h-[55px] md:w-[200px] md:h-[70px]  rounded-full z-30 absolute bottom-2 right-[1px] md:right-2 dark:bg-gray-800 dark:border-white flex justify-center items-center">
-                <h1
-                  onClick={loadFitness}
-                  className="text-[#29a587] font-SagarFont font-semibold text-sm hover:cursor-pointer hover:text-orange-600 active:scale-95 transition-all ease-in-out duration-300"
-                >
-                  &lt;Fit Mode /&gt;
-                </h1>
+
+              <div className="flex flex-col w-[160px] md:w-[200px] rounded-full absolute bottom-2 right-[1px] md:right-2 transition-all ease-in-out duration-300 justify-center items-center z-40 hover:scale-105 active:scale-100">
+                <div className="relative w-full">
+                  <div className="absolute inset-0 bg-[#2fc29e] opacity-20 rounded-full animate-pulse" />
+
+                  <div
+                    className="w-full rounded-full bg-[#2fc29e/90] h-full p-1 flex cursor-pointer"
+                    onClick={loadFitness}
+                  >
+                    <div className="w-full h-full bg-gradient-to-r from-[#29a587] to-[#2fc29e] rounded-full opacity-90 flex justify-center items-center">
+                      <h1 className="text-white font-SagarFont font-semibold py-3 text-md transition-all ease-in-out duration-300">
+                        &lt;Fit Mode /&gt;
+                      </h1>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -505,39 +522,6 @@ export default function Home() {
                   />
                 </div>
 
-                {/* <div
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setTimeout(() => {
-                      handleLink(
-                        "https://twitter.com/SagarTanda882",
-                        "Sagar Tandan"
-                      );
-                    }, 300);
-                  }}
-                  class="group relative hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300"
-                >
-                  {darkMode ? (
-                    <img
-                      src={wtwi}
-                      alt="Normal Image"
-                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
-                    />
-                  ) : (
-                    <img
-                      src={twitter}
-                      alt="Normal Image"
-                      class="w-7 h-7 transition duration-500 ease-in-out group-hover:opacity-0"
-                    />
-                  )}
-
-                  <img
-                    src={twitterh}
-                    alt="Hover Image"
-                    class="w-7 h-7 absolute top-0 left-0 opacity-0 transition duration-300 ease-in-out group-hover:opacity-100"
-                  />
-                </div> */}
-
                 <div
                   onClick={(e) => {
                     e.preventDefault();
@@ -604,21 +588,39 @@ export default function Home() {
                   class="w-[500px] h-[590px] z-20 object-cover object-center rounded-full absolute top-[45%] left-[54%] transform -translate-x-1/2 -translate-y-1/2"
                 ></img>
               </div>
-              <div className="flex flex-col border-[1px] border-black bg-white w-[200px] h-[70px] rounded-full z-30 absolute bottom-13 left-[-30px] dark:bg-gray-800 dark:border-white transition-all ease-in-out duration-300 justify-center items-center">
-                <h1
-                  onClick={loadDeveloper}
-                  className=" text-[#29a587] font-SagarFont font-semibold text-md hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300 hover:text-orange-600"
-                >
-                  &lt;Developer Mode /&gt;
-                </h1>
+
+              <div className="flex flex-col w-[200px] rounded-full absolute bottom-13 left-[-30px] transition-all ease-in-out duration-300 justify-center items-center z-40 hover:scale-105 active:scale-100">
+                <div className="relative w-full">
+                  <div className="absolute inset-0 bg-[#2fc29e] opacity-20 rounded-full animate-pulse" />
+
+                  <div
+                    className="w-full rounded-full bg-[#2fc29e/90] h-full p-1 flex cursor-pointer"
+                    onClick={loadDeveloper}
+                  >
+                    <div className="w-full h-full bg-gradient-to-r from-[#29a587] to-[#2fc29e] rounded-full opacity-90 flex justify-center items-center">
+                      <h1 className="text-white font-SagarFont font-semibold py-3 text-md transition-all ease-in-out duration-300">
+                        &lt;Developer Mode /&gt;
+                      </h1>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="flex flex-col justify-center items-center border-[1px] border-black bg-white w-[200px] h-[70px] rounded-full z-30 absolute bottom-2 right-3 dark:bg-gray-800 dark:border-white transition-all ease-in-out duration-300">
-                <h1
-                  onClick={loadFitness}
-                  className=" text-[#29a587] font-SagarFont font-semibold text-md hover:cursor-pointer active:scale-95 transition-all ease-in-out duration-300 hover:text-orange-600"
-                >
-                  &lt;Fit Mode /&gt;
-                </h1>
+
+              <div className="flex flex-col w-[200px] rounded-full absolute bottom-2 right-3 transition-all ease-in-out duration-300 justify-center items-center z-40 hover:scale-105 active:scale-100">
+                <div className="relative w-full">
+                  <div className="absolute inset-0 bg-[#2fc29e] opacity-20 rounded-full animate-pulse" />
+
+                  <div
+                    className="w-full rounded-full bg-[#2fc29e/90] h-full p-1 flex cursor-pointer"
+                    onClick={loadFitness}
+                  >
+                    <div className="w-full h-full bg-gradient-to-r from-[#29a587] to-[#2fc29e] rounded-full opacity-90 flex justify-center items-center">
+                      <h1 className="text-white font-SagarFont font-semibold py-3 text-md transition-all ease-in-out duration-300">
+                        &lt;Fit Mode /&gt;
+                      </h1>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
