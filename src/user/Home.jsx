@@ -351,7 +351,7 @@ export default function Home() {
                   e.preventDefault();
                   setTimeout(() => {
                     handleLink(
-                      "https://drive.google.com/file/d/1pvFjNLbSJtiVwCTCdG7W9Y5YGOD2l4Ud/view?usp=sharing",
+                      "https://drive.google.com/file/d/1qCI_q0SKQxzs0lkd3XNNnRVtMbLLlTMH/view?usp=sharing",
                       "Sagar Tandan"
                     );
                   }, 100);
@@ -561,7 +561,7 @@ export default function Home() {
                     e.preventDefault();
                     setTimeout(() => {
                       handleLink(
-                        "https://drive.google.com/file/d/1pvFjNLbSJtiVwCTCdG7W9Y5YGOD2l4Ud/view?usp=sharing",
+                        "https://drive.google.com/file/d/1qCI_q0SKQxzs0lkd3XNNnRVtMbLLlTMH/view?usp=sharing",
                         "Sagar Tandan"
                       );
                     }, 100);
